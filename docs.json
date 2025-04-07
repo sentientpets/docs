@@ -8,7 +8,17 @@
     "dark": "#62EFBD"
   },
   "favicon": "/favicon.svg",
-  "backgroundImage": "/images/background-light.png",
+  "appearance": {
+    "default": "light",
+    "strict": true
+  },
+  "background": {
+    "color": {
+      "light": "#FFFFFF",
+      "dark": "#FFFFFF"
+    },
+    "decoration": "none"
+  },
   "navigation": {
     "tabs": [
       {
@@ -129,7 +139,6 @@
       "discord": "https://discord.gg/gochi"
     }
   },
-  "defaultTheme": "light",
   "feedback": {
     "suggestEdit": false,
     "raiseIssue": false
