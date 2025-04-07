@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "GOCHI Documentation",
   "colors": {
-    "primary": "#62EFBD",
-    "light": "#62EFBD",
-    "dark": "#62EFBD"
+    "primary": "#2A9D8F",
+    "light": "#3CB371",
+    "dark": "#1A6E62"
   },
   "favicon": "/favicon.svg",
   "appearance": {
