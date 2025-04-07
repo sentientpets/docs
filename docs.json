@@ -25,52 +25,47 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Getting Started",
+            "group": "Introduction",
             "pages": [
-              "introduction",
-              "quickstart",
-              "official-links"
+              "Quickstart",
+              "Official-Links"
             ]
           },
           {
             "group": "GOCHI Pet Mechanics & AI",
             "pages": [
-              "pet-mechanics-ai/overview",
-              "pet-mechanics-ai/pet-stats-needs",
-              "pet-mechanics-ai/ai-personality",
-              "pet-mechanics-ai/care-activities",
-              "pet-mechanics-ai/pet-health-status",
-              "pet-mechanics-ai/special-interactions"
+              "pet-mechanics-ai/Pet-Stats-Needs",
+              "pet-mechanics-ai/Ai-Personality",
+              "pet-mechanics-ai/Care-Activities",
+              "pet-mechanics-ai/Pet-Health-Status",
+              "pet-mechanics-ai/Special-Interactions"
             ]
           },
           {
             "group": "Earning Mechanics",
             "pages": [
-              "earning-mechanics/overview",
-              "earning-mechanics/care-to-earn",
-              "earning-mechanics/token-holding-benefits",
-              "earning-mechanics/reward-distribution",
-              "earning-mechanics/economic-model"
+              "earning-mechanics/Care-To-Earn",
+              "earning-mechanics/Token-Holding-Benefits",
+              "earning-mechanics/Reward-Distribution",
+              "earning-mechanics/Economic-Model"
             ]
           },
           {
             "group": "Points System",
             "pages": [
-              "points-system/overview",
-              "points-system/pre-launch-points",
-              "points-system/referral-system",
-              "points-system/points-conversion",
-              "points-system/post-launch-transition"
+              "points-system/Pre-Launch-Points",
+              "points-system/Referral-System",
+              "points-system/Points-Conversion",
+              "points-system/Post-Launch-Transition"
             ]
           },
           {
             "group": "Tokenomics",
             "pages": [
-              "tokenomics/overview",
-              "tokenomics/token-overview",
-              "tokenomics/tax-system",
-              "tokenomics/distribution-model",
-              "tokenomics/token-economics"
+              "tokenomics/Token-Overview",
+              "tokenomics/Tax-System",
+              "tokenomics/Distribution-Model",
+              "tokenomics/Token-Economics"
             ]
           }
         ]
@@ -116,8 +111,8 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "https://docs.gochipet.ai/~gitbook/image?url=https%3A%2F%2F3572744674-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FSoFtSCwv9ORY7m1mc6zw%252Fsites%252Fsite_xQb1W%252Flogo%252Fa2ZZRpMnizCz048EmU0L%252Fgochipfp.webp%3Falt%3Dmedia%26token%3D0a3f00f8-f78e-47ec-8cfc-4b059190a3c7&width=260&dpr=1&quality=100&sign=6fc67aac&sv=2",
+    "dark": "https://docs.gochipet.ai/~gitbook/image?url=https%3A%2F%2F3572744674-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FSoFtSCwv9ORY7m1mc6zw%252Fsites%252Fsite_xQb1W%252Flogo%252Fa2ZZRpMnizCz048EmU0L%252Fgochipfp.webp%3Falt%3Dmedia%26token%3D0a3f00f8-f78e-47ec-8cfc-4b059190a3c7&width=260&dpr=1&quality=100&sign=6fc67aac&sv=2"
   },
   "navbar": {
     "links": [
