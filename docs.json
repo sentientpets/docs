@@ -1,35 +1,65 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "GOCHI Documentation",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#62EFBD",
+    "light": "#7B4AFF",
+    "dark": "#7B4AFF"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "https://www.gitbook.com/cdn-cgi/image/width=18,dpr=2,height=18,fit=contain,format=auto/https%3A%2F%2Ffiles.gitbook.com%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FYv0htsJ66B6R2jHRwvIC%252Ficon%252Fr7OLMXlZ0Ci08ELsXXxd%252Fgochipfp.webp%3Falt%3Dmedia%26token%3Dba3ea338-2b07-4f27-a977-004dd778fbf0",
   "navigation": {
     "tabs": [
       {
         "tab": "Guides",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Getting Started",
             "pages": [
               "introduction",
               "quickstart",
-              "development"
+              "official-links"
             ]
           },
           {
-            "group": "Essentials",
+            "group": "GOCHI Pet Mechanics & AI",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "pet-mechanics-ai/overview",
+              "pet-mechanics-ai/pet-stats-needs",
+              "pet-mechanics-ai/ai-personality",
+              "pet-mechanics-ai/care-activities",
+              "pet-mechanics-ai/pet-health-status",
+              "pet-mechanics-ai/special-interactions"
+            ]
+          },
+          {
+            "group": "Earning Mechanics",
+            "pages": [
+              "earning-mechanics/overview",
+              "earning-mechanics/care-to-earn",
+              "earning-mechanics/token-holding-benefits",
+              "earning-mechanics/reward-distribution",
+              "earning-mechanics/economic-model"
+            ]
+          },
+          {
+            "group": "Points System",
+            "pages": [
+              "points-system/overview",
+              "points-system/pre-launch-points",
+              "points-system/referral-system",
+              "points-system/points-conversion",
+              "points-system/post-launch-transition"
+            ]
+          },
+          {
+            "group": "Tokenomics",
+            "pages": [
+              "tokenomics/overview",
+              "tokenomics/token-overview",
+              "tokenomics/tax-system",
+              "tokenomics/distribution-model",
+              "tokenomics/token-economics"
             ]
           }
         ]
@@ -40,16 +70,15 @@
           {
             "group": "API Documentation",
             "pages": [
-              "api-reference/introduction"
+              "api-reference/overview"
             ]
           },
           {
-            "group": "Endpoint Examples",
+            "group": "Endpoints",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api-reference/user",
+              "api-reference/pet",
+              "api-reference/rewards"
             ]
           }
         ]
@@ -58,45 +87,48 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Website",
+          "href": "https://gochipet.ai",
+          "icon": "globe"
         },
         {
           "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "href": "https://discord.gg/gochi",
+          "icon": "discord"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Twitter",
+          "href": "https://x.com/gochionsol",
+          "icon": "twitter"
         }
       ]
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "https://www.gitbook.com/cdn-cgi/image/width=18,dpr=2,height=18,fit=contain,format=auto/https%3A%2F%2Ffiles.gitbook.com%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FYv0htsJ66B6R2jHRwvIC%252Ficon%252Fr7OLMXlZ0Ci08ELsXXxd%252Fgochipfp.webp%3Falt%3Dmedia%26token%3Dba3ea338-2b07-4f27-a977-004dd778fbf0",
+    "dark": "https://www.gitbook.com/cdn-cgi/image/width=18,dpr=2,height=18,fit=contain,format=auto/https%3A%2F%2Ffiles.gitbook.com%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FYv0htsJ66B6R2jHRwvIC%252Ficon%252Fr7OLMXlZ0Ci08ELsXXxd%252Fgochipfp.webp%3Falt%3Dmedia%26token%3Dba3ea338-2b07-4f27-a977-004dd778fbf0"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@gochipet.ai"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Play Now",
+      "href": "https://gochipet.ai"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "twitter": "https://x.com/gochionsol",
+      "github": "https://github.com/gochi",
+      "discord": "https://discord.gg/gochi"
     }
+  },
+  "modeToggle": {
+    "default": "light"
   }
 }
