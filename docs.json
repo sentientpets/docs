@@ -116,8 +116,8 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "https://docs.gochipet.ai/~gitbook/image?url=https%3A%2F%2F3572744674-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FSoFtSCwv9ORY7m1mc6zw%252Fsites%252Fsite_xQb1W%252Flogo%252Fa2ZZRpMnizCz048EmU0L%252Fgochipfp.webp%3Falt%3Dmedia%26token%3D0a3f00f8-f78e-47ec-8cfc-4b059190a3c7&width=260&dpr=1&quality=100&sign=6fc67aac&sv=2",
+    "dark": "https://docs.gochipet.ai/~gitbook/image?url=https%3A%2F%2F3572744674-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FSoFtSCwv9ORY7m1mc6zw%252Fsites%252Fsite_xQb1W%252Flogo%252Fa2ZZRpMnizCz048EmU0L%252Fgochipfp.webp%3Falt%3Dmedia%26token%3D0a3f00f8-f78e-47ec-8cfc-4b059190a3c7&width=260&dpr=1&quality=100&sign=6fc67aac&sv=2"
   },
   "navbar": {
     "links": [
