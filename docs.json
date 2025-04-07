@@ -25,9 +25,8 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Getting Started",
+            "group": "Introduction",
             "pages": [
-              "introduction",
               "quickstart",
               "official-links"
             ]
