@@ -27,50 +27,46 @@
           {
             "group": "Getting Started",
             "pages": [
-              "introduction",
-              "quickstart",
-              "official-links"
+              "Introduction",
+              "Quickstart",
+              "Official-Links"
             ]
           },
           {
             "group": "GOCHI Pet Mechanics & AI",
             "pages": [
-              "pet-mechanics-ai/overview",
-              "pet-mechanics-ai/pet-stats-needs",
-              "pet-mechanics-ai/ai-personality",
-              "pet-mechanics-ai/care-activities",
-              "pet-mechanics-ai/pet-health-status",
-              "pet-mechanics-ai/special-interactions"
+              "pet-mechanics-ai/Pet-Stats-Needs",
+              "pet-mechanics-ai/Ai-Personality",
+              "pet-mechanics-ai/Care-Activities",
+              "pet-mechanics-ai/Pet-Health-Status",
+              "pet-mechanics-ai/Special-Interactions"
             ]
           },
           {
             "group": "Earning Mechanics",
             "pages": [
-              "earning-mechanics/overview",
-              "earning-mechanics/care-to-earn",
-              "earning-mechanics/token-holding-benefits",
-              "earning-mechanics/reward-distribution",
-              "earning-mechanics/economic-model"
+              "earning-mechanics/Care-To-Earn",
+              "earning-mechanics/Token-Holding-Benefits",
+              "earning-mechanics/Reward-Distribution",
+              "earning-mechanics/Economic-Model"
             ]
           },
           {
             "group": "Points System",
             "pages": [
-              "points-system/overview",
-              "points-system/pre-launch-points",
-              "points-system/referral-system",
-              "points-system/points-conversion",
-              "points-system/post-launch-transition"
+              "points-system/Pre-Launch-Points",
+              "points-system/Referral-System",
+              "points-system/Points-Conversion",
+              "points-system/Post-Launch-Transition"
             ]
           },
           {
             "group": "Tokenomics",
             "pages": [
-              "tokenomics/overview",
-              "tokenomics/token-overview",
-              "tokenomics/tax-system",
-              "tokenomics/distribution-model",
-              "tokenomics/token-economics"
+              "tokenomics/Token-Overview",
+              "tokenomics/Tax-System",
+              "tokenomics/Distribution-Model",
+              "tokenomics/Token-Economics"
             ]
           }
         ]
@@ -81,15 +77,15 @@
           {
             "group": "API Documentation",
             "pages": [
-              "api-reference/overview"
+              "api-reference/Overview"
             ]
           },
           {
             "group": "Endpoints",
             "pages": [
-              "api-reference/user",
-              "api-reference/pet",
-              "api-reference/rewards"
+              "api-reference/User",
+              "api-reference/Pet",
+              "api-reference/Rewards"
             ]
           }
         ]
