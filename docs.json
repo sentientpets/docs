@@ -27,46 +27,46 @@
           {
             "group": "Getting Started",
             "pages": [
-              { "name": "Introduction", "path": "introduction" },
-              { "name": "Quickstart", "path": "quickstart" },
-              { "name": "Official Links", "path": "official-links" }
+              "introduction",
+              "quickstart",
+              "official-links"
             ]
           },
           {
             "group": "GOCHI Pet Mechanics & AI",
             "pages": [
-              { "name": "Pet Stats Needs", "path": "pet-mechanics-ai/pet-stats-needs" },
-              { "name": "AI Personality", "path": "pet-mechanics-ai/ai-personality" },
-              { "name": "Care Activities", "path": "pet-mechanics-ai/care-activities" },
-              { "name": "Pet Health Status", "path": "pet-mechanics-ai/pet-health-status" },
-              { "name": "Special Interactions", "path": "pet-mechanics-ai/special-interactions" }
+              "pet-mechanics-ai/pet-stats-needs",
+              "pet-mechanics-ai/ai-personality",
+              "pet-mechanics-ai/care-activities",
+              "pet-mechanics-ai/pet-health-status",
+              "pet-mechanics-ai/special-interactions"
             ]
           },
           {
             "group": "Earning Mechanics",
             "pages": [
-              { "name": "Care To Earn", "path": "earning-mechanics/care-to-earn" },
-              { "name": "Token Holding Benefits", "path": "earning-mechanics/token-holding-benefits" },
-              { "name": "Reward Distribution", "path": "earning-mechanics/reward-distribution" },
-              { "name": "Economic Model", "path": "earning-mechanics/economic-model" }
+              "earning-mechanics/care-to-earn",
+              "earning-mechanics/token-holding-benefits",
+              "earning-mechanics/reward-distribution",
+              "earning-mechanics/economic-model"
             ]
           },
           {
             "group": "Points System",
             "pages": [
-              { "name": "Pre Launch Points", "path": "points-system/pre-launch-points" },
-              { "name": "Referral System", "path": "points-system/referral-system" },
-              { "name": "Points Conversion", "path": "points-system/points-conversion" },
-              { "name": "Post Launch Transition", "path": "points-system/post-launch-transition" }
+              "points-system/pre-launch-points",
+              "points-system/referral-system",
+              "points-system/points-conversion",
+              "points-system/post-launch-transition"
             ]
           },
           {
             "group": "Tokenomics",
             "pages": [
-              { "name": "Token Overview", "path": "tokenomics/token-overview" },
-              { "name": "Tax System", "path": "tokenomics/tax-system" },
-              { "name": "Distribution Model", "path": "tokenomics/distribution-model" },
-              { "name": "Token Economics", "path": "tokenomics/token-economics" }
+              "tokenomics/token-overview",
+              "tokenomics/tax-system",
+              "tokenomics/distribution-model",
+              "tokenomics/token-economics"
             ]
           }
         ]
@@ -77,15 +77,15 @@
           {
             "group": "API Documentation",
             "pages": [
-              { "name": "Overview", "path": "api-reference/overview" }
+              "api-reference/overview"
             ]
           },
           {
             "group": "Endpoints",
             "pages": [
-              { "name": "User", "path": "api-reference/user" },
-              { "name": "Pet", "path": "api-reference/pet" },
-              { "name": "Rewards", "path": "api-reference/rewards" }
+              "api-reference/user",
+              "api-reference/pet",
+              "api-reference/rewards"
             ]
           }
         ]
