@@ -3,7 +3,7 @@
   "theme": "mint",
   "name": "GOCHI Documentation",
   "colors": {
-    "primary": "#CADC9C",
+    "primary": "b1c777",
     "light": "#D1E3B0",
     "dark": "#31361D"
   },
