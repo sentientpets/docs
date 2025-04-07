@@ -5,15 +5,7 @@
   "colors": {
     "primary": "#62EFBD",
     "light": "#62EFBD",
-    "dark": "#62EFBD",
-    "background": {
-      "light": "#FFFFFF",
-      "dark": "#FFFFFF"
-    },
-    "anchors": {
-      "from": "#62EFBD",
-      "to": "#7B4AFF"
-    }
+    "dark": "#62EFBD"
   },
   "favicon": "/favicon.svg",
   "backgroundImage": "/images/background-light.png",
@@ -137,10 +129,7 @@
       "discord": "https://discord.gg/gochi"
     }
   },
-  "modeToggle": {
-    "default": "light",
-    "isHidden": true
-  },
+  "defaultTheme": "light",
   "feedback": {
     "suggestEdit": false,
     "raiseIssue": false
