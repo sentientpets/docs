@@ -27,45 +27,45 @@
           {
             "group": "Introduction",
             "pages": [
-              "Quickstart",
-              "Official-Links"
+              // "Quickstart",
+              // "Official-Links"
             ]
           },
           {
             "group": "GOCHI Pet Mechanics & AI",
             "pages": [
-              "pet-mechanics-ai/Pet-Stats-Needs",
-              "pet-mechanics-ai/Ai-Personality",
-              "pet-mechanics-ai/Care-Activities",
-              "pet-mechanics-ai/Pet-Health-Status",
-              "pet-mechanics-ai/Special-Interactions"
+              // "pet-mechanics-ai/Pet-Stats-Needs",
+              // "pet-mechanics-ai/Ai-Personality",
+              // "pet-mechanics-ai/Care-Activities",
+              // "pet-mechanics-ai/Pet-Health-Status",
+              // "pet-mechanics-ai/Special-Interactions"
             ]
           },
           {
             "group": "Earning Mechanics",
             "pages": [
-              "earning-mechanics/Care-To-Earn",
-              "earning-mechanics/Token-Holding-Benefits",
-              "earning-mechanics/Reward-Distribution",
-              "earning-mechanics/Economic-Model"
+              // "earning-mechanics/Care-To-Earn",
+              // "earning-mechanics/Token-Holding-Benefits",
+              // "earning-mechanics/Reward-Distribution",
+              // "earning-mechanics/Economic-Model"
             ]
           },
           {
             "group": "Points System",
             "pages": [
-              "points-system/Pre-Launch-Points",
-              "points-system/Referral-System",
-              "points-system/Points-Conversion",
-              "points-system/Post-Launch-Transition"
+              // "points-system/Pre-Launch-Points",
+              // "points-system/Referral-System",
+              // "points-system/Points-Conversion",
+              // "points-system/Post-Launch-Transition"
             ]
           },
           {
             "group": "Tokenomics",
             "pages": [
-              "tokenomics/Token-Overview",
-              "tokenomics/Tax-System",
-              "tokenomics/Distribution-Model",
-              "tokenomics/Token-Economics"
+              // "tokenomics/Token-Overview",
+              // "tokenomics/Tax-System",
+              // "tokenomics/Distribution-Model",
+              // "tokenomics/Token-Economics"
             ]
           }
         ]
