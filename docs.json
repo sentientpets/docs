@@ -17,7 +17,7 @@
       "light": "#FFFFFF",
       "dark": "#FFFFFF"
     },
-    "decoration": "grid"
+    "decoration": "windows"
   },
   "navigation": {
     "tabs": [
