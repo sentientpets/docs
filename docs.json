@@ -4,8 +4,8 @@
   "name": "GOCHI Documentation",
   "colors": {
     "primary": "#CADC9C",
-    "light": "#3CB371",
-    "dark": "#1A6E62"
+    "light": "#D1E3B0",
+    "dark": "#31361D"
   },
   "favicon": "/favicon.svg",
   "appearance": {
