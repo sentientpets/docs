@@ -1,0 +1,96 @@
+---
+title: 'Pet Stats & Needs'
+description: 'Understanding the core attributes and needs of your GOCHI pet'
+---
+
+## Core Attributes
+
+Every GOCHI pet has four primary attributes that determine its overall wellbeing and earning potential:
+
+<CardGroup cols={2}>
+  <Card title="Hunger" icon="bowl-food">
+    How well-fed your pet is
+    <br />**Weight in Score:** 40%
+    <br />**Decay Rate:** -30% per hour
+  </Card>
+  <Card title="Happiness" icon="face-smile">
+    Your pet's contentment level
+    <br />**Weight in Score:** 20%
+    <br />**Decay Rate:** -25% per hour
+  </Card>
+  <Card title="Cleanliness" icon="shower">
+    How clean your pet is
+    <br />**Weight in Score:** 20%
+    <br />**Decay Rate:** -20% per hour
+  </Card>
+  <Card title="Energy" icon="bolt">
+    Your pet's activity level
+    <br />**Weight in Score:** 20%
+    <br />**Decay Rate:** -15% per hour
+  </Card>
+</CardGroup>
+
+## Attribute Decay
+
+<Note>
+Your pet's attributes naturally decay over time, requiring regular care to maintain optimal levels.
+</Note>
+
+Each attribute decreases at its own rate when left unattended:
+
+```javascript
+const decayRates = {
+  hunger: 0.3,     // 30% per hour
+  happiness: 0.25, // 25% per hour
+  cleanliness: 0.2, // 20% per hour
+  energy: 0.15     // 15% per hour
+};
+```
+
+This decay system requires 8-10 interactions within a 10-hour active period to maintain optimal pet health.
+
+## Critical Thresholds
+
+When attributes fall below certain levels, your pet experiences negative effects that impact earnings:
+
+| Threshold | Time Without Care | Effect on Earnings |
+|-----------|-------------------|-------------------|
+| Hungry | ~3.5 hours | -75% earning rate |
+| Severely Hungry | ~4.25 hours | -95% earning rate |
+| Death | 8-10 hours | No earnings, requires revival |
+
+<Warning>
+If your pet reaches the death state, you will stop earning completely until you revive it through the recovery process.
+</Warning>
+
+## Sleep Mode
+
+<Accordion title="Sleep Mode Benefits">
+  When activated, Sleep Mode reduces attribute decay by 70% for 6-8 hours, allowing you to maintain better pet health during overnight periods or when you can't actively care for your pet.
+</Accordion>
+
+<Tip>
+Always activate Sleep Mode before extended absences to protect your earning potential.
+</Tip>
+
+## Optimal Care Strategy
+
+For maximum earnings, aim to:
+
+<Steps>
+  <Step title="Maintain High Stat Levels">
+    Keep all stats above 70% for optimal earning rates
+  </Step>
+  <Step title="Regular Interactions">
+    Interact with your pet 8-10 times during active periods
+  </Step>
+  <Step title="Prevent Critical Thresholds">
+    Never let attributes drop below critical thresholds
+  </Step>
+  <Step title="Use Sleep Mode">
+    Activate Sleep Mode before extended absences
+  </Step>
+  <Step title="Balance Care">
+    Distribute your attention across all attributes
+  </Step>
+</Steps>
