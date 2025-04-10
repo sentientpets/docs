@@ -35,10 +35,10 @@
             "group": "GOCHI Pet Mechanics & AI",
             "pages": [
               "Pet-Stats",
-              "pet-mechanics-ai/ai-personality",
-              "pet-mechanics-ai/care-activities",
-              "pet-mechanics-ai/pet-health-status",
-              "pet-mechanics-ai/special-interactions"
+              "AI-Personality",
+              "Care-Activities",
+              "Pet-Health",
+              "Special-Interactions"
             ]
           },
           {

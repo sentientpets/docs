@@ -1,96 +1,169 @@
 ---
 title: 'Pet Stats & Needs'
-description: 'Understanding the core attributes and needs of your GOCHI pet'
+description: 'Understanding how to keep your GOCHI pet healthy and maximize your rewards'
 ---
+
+Your GOCHI pet thrives on proper care, with four primary attributes determining its wellbeing. Maintaining these stats doesn't just keep your pet happy – it directly impacts your earning potential.
+
+<Frame caption="All pet statistics are clearly visible in the main interface">
+  <img src="/images/pet-interface.png" alt="GOCHI Pet Interface" />
+</Frame>
 
 ## Core Attributes
 
-Every GOCHI pet has four primary attributes that determine its overall wellbeing and earning potential:
+Every GOCHI pet has four essential attributes that you'll need to monitor and maintain:
 
 <CardGroup cols={2}>
   <Card title="Hunger" icon="bowl-food">
-    How well-fed your pet is
-    <br />**Weight in Score:** 40%
-    <br />**Decay Rate:** -30% per hour
+    How well-fed your pet is. This decays the fastest at **30% per hour** and has the largest impact on your pet's overall health and earnings.
+    
+    When hunger drops too low, your earning rate decreases dramatically.
   </Card>
   <Card title="Happiness" icon="face-smile">
-    Your pet's contentment level
-    <br />**Weight in Score:** 20%
-    <br />**Decay Rate:** -25% per hour
+    Your pet's emotional wellbeing. Decays at **25% per hour** and is primarily increased through play activities.
+    
+    A happy pet earns more rewards and develops more positive personality traits.
   </Card>
   <Card title="Cleanliness" icon="shower">
-    How clean your pet is
-    <br />**Weight in Score:** 20%
-    <br />**Decay Rate:** -20% per hour
+    How clean your pet is. Decays at **20% per hour** and requires regular grooming to maintain.
+    
+    Low cleanliness can negatively impact happiness and health over time.
   </Card>
   <Card title="Energy" icon="bolt">
-    Your pet's activity level
-    <br />**Weight in Score:** 20%
-    <br />**Decay Rate:** -15% per hour
+    Your pet's activity level. Decays at **15% per hour** and is consumed when playing.
+    
+    Energy naturally replenishes over time and is required for play activities.
   </Card>
 </CardGroup>
 
-## Attribute Decay
+## How Stats Affect Earnings
 
-<Note>
-Your pet's attributes naturally decay over time, requiring regular care to maintain optimal levels.
-</Note>
-
-Each attribute decreases at its own rate when left unattended:
+Your pet's overall condition directly determines your earning rate. The system weights each attribute based on its importance:
 
 ```javascript
-const decayRates = {
-  hunger: 0.3,     // 30% per hour
-  happiness: 0.25, // 25% per hour
-  cleanliness: 0.2, // 20% per hour
-  energy: 0.15     // 15% per hour
+// Weighted impact of each stat on earnings
+const earningImpact = {
+  hunger: 0.4,      // 40% of total score
+  happiness: 0.2,   // 20% of total score
+  cleanliness: 0.2, // 20% of total score
+  energy: 0.2       // 20% of total score
 };
+
+// This means keeping hunger high should be your top priority!
 ```
 
-This decay system requires 8-10 interactions within a 10-hour active period to maintain optimal pet health.
+The combined stat average determines your base earnings multiplier, ranging from 0.1× (critical condition) to 3.0× (excellent care).
+
+## Attribute Decay Visualization
+
+Each attribute naturally declines over time, requiring your attention:
+
+<Frame caption="Stat decay rates visualized over a 10-hour period">
+  <img src="/images/stat-decay.png" alt="GOCHI Stat Decay Rates" />
+</Frame>
+
+What this means for your daily care routine:
+
+<Steps>
+  <Step title="Morning Care">
+    Start your day by feeding your pet and checking all stats
+  </Step>
+  <Step title="Regular Check-ins">
+    Plan for 8-10 interactions spread throughout your active hours
+  </Step>
+  <Step title="Priority Check">
+    When time is limited, prioritize hunger (fastest decay, highest impact)
+  </Step>
+  <Step title="Evening Ritual">
+    Before longer absences, ensure all stats are high and activate Sleep Mode
+  </Step>
+</Steps>
 
 ## Critical Thresholds
 
-When attributes fall below certain levels, your pet experiences negative effects that impact earnings:
+Your pet experiences different states based on its stat levels, each with significant impacts on your earnings:
 
-| Threshold | Time Without Care | Effect on Earnings |
-|-----------|-------------------|-------------------|
-| Hungry | ~3.5 hours | -75% earning rate |
-| Severely Hungry | ~4.25 hours | -95% earning rate |
-| Death | 8-10 hours | No earnings, requires revival |
+| State | Threshold | Time to Reach | Effect on Earnings | Visual Indicator |
+|-------|-----------|---------------|-------------------|------------------|
+| Optimal | All stats >70% | Requires regular care | 3.0× base rate | Green status bars |
+| Good | All stats >60% | ~2 hours without care | 2.0× base rate | Green-yellow status bars |
+| Average | All stats >50% | ~3 hours without care | 1.0× base rate | Yellow status bars |
+| Hungry | Hunger <40% | ~3.5 hours without feeding | 0.25× base rate (75% reduction) | Red hunger bar |
+| Severely Hungry | Hunger <20% | ~4.25 hours without feeding | 0.05× base rate (95% reduction) | Flashing red hunger bar |
+| Dead | Extended neglect | 8-10 hours without care | No earnings | Gray interface with revival option |
+
+<Note>
+Your pet will provide visual and notification cues as it approaches critical thresholds. Pay attention to these warnings to maintain optimal earning rates.
+</Note>
+
+## Sleep Mode Benefits
+
+When you can't actively care for your pet, Sleep Mode is essential:
+
+<CardGroup cols={2}>
+  <Card title="Reduced Decay" icon="moon">
+    Activating Sleep Mode reduces all stat decay rates by 70%
+  </Card>
+  <Card title="Protection Period" icon="shield-halved">
+    Provides 6-8 hours of protection from critical thresholds
+  </Card>
+  <Card title="Earning Safeguard" icon="sack-dollar">
+    Maintains minimum earning rate during inactive periods
+  </Card>
+  <Card title="Wake-up Boost" icon="sun">
+    Pets wake up with a small temporary bonus to happiness
+  </Card>
+</CardGroup>
 
 <Warning>
-If your pet reaches the death state, you will stop earning completely until you revive it through the recovery process.
+Always activate Sleep Mode before extended absences, especially overnight! This single habit can dramatically improve your earnings over time.
 </Warning>
-
-## Sleep Mode
-
-<Accordion title="Sleep Mode Benefits">
-  When activated, Sleep Mode reduces attribute decay by 70% for 6-8 hours, allowing you to maintain better pet health during overnight periods or when you can't actively care for your pet.
-</Accordion>
-
-<Tip>
-Always activate Sleep Mode before extended absences to protect your earning potential.
-</Tip>
 
 ## Optimal Care Strategy
 
-For maximum earnings, aim to:
+For maximum earnings, follow these proven strategies:
 
-<Steps>
-  <Step title="Maintain High Stat Levels">
-    Keep all stats above 70% for optimal earning rates
-  </Step>
-  <Step title="Regular Interactions">
-    Interact with your pet 8-10 times during active periods
-  </Step>
-  <Step title="Prevent Critical Thresholds">
-    Never let attributes drop below critical thresholds
-  </Step>
-  <Step title="Use Sleep Mode">
-    Activate Sleep Mode before extended absences
-  </Step>
-  <Step title="Balance Care">
-    Distribute your attention across all attributes
-  </Step>
-</Steps>
+<AccordionGroup>
+  <Accordion title="Stat Prioritization">
+    When time is limited, focus on these stats in order:
+    1. **Hunger** (highest weight, fastest decay)
+    2. **Happiness** (significant impact on personality development)
+    3. **Cleanliness** (affects long-term health)
+    4. **Energy** (lowest priority as it has the slowest decay)
+  </Accordion>
+  
+  <Accordion title="Interaction Timing">
+    Create a care schedule that works with your daily routine:
+    - Morning care session (comprehensive)
+    - Quick check-ins every 2-3 hours
+    - Evening care session (comprehensive)
+    - Sleep Mode activation before bed
+    
+    Consistency is more important than intensity – regular modest care outperforms sporadic excellent care.
+  </Accordion>
+  
+  <Accordion title="Advanced Techniques">
+    Once you're comfortable with basic care:
+    - Use premium foods strategically before longer absences
+    - Combine different play activities to maximize happiness gain
+    - Monitor personality development to identify preferred activities
+    - Build care streaks for bonus multipliers
+  </Accordion>
+</AccordionGroup>
+
+<Frame caption="Pet care dashboard showing optimal stat management">
+  <img src="/images/pet-care-dashboard.png" alt="GOCHI Care Dashboard" />
+</Frame>
+
+Ready to learn more about your pet's AI personality system and how it develops based on your care patterns? Check out our next guide:
+
+<div className="mt-8">
+  <Button
+    href="/ai-personality"
+    size="lg"
+    variant="primary"
+    rightIcon="arrow-right"
+  >
+    Explore AI Personality System
+  </Button>
+</div>
