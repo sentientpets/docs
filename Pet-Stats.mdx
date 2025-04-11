@@ -3,41 +3,71 @@ title: 'Pet Stats & Needs'
 description: 'Understanding the core attributes and needs of your GOCHI pet'
 ---
 
+Understanding the core attributes and needs of your GOCHI pet
+
+<Frame>
+  <img src="https://media.discordapp.net/attachments/1224667348620021830/1360311922754453685/image_7.png?ex=67faa8b3&is=67f95733&hm=930dd1b811fb9aa865c88f5415b23e1cd39eb4470e5caf3d0799e64d71cf4fb3&=&format=webp&quality=lossless" alt="GOCHI Pet Stats Overview" />
+</Frame>
+
 ## Core Attributes
 
 Every GOCHI pet has four primary attributes that determine its overall wellbeing and earning potential:
 
 <CardGroup cols={2}>
-  <Card title="Hunger">
-    How well-fed your pet is
-    
-    **Weight in Score:** 40%
-    
-    **Decay Rate:** -30% per hour
+  <Card>
+    <div className="flex items-center">
+      <div className="mr-3 text-green-500">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+      </div>
+      <div>
+        <h3 className="font-semibold">Hunger</h3>
+        <p>How well-fed your pet is</p>
+        <p><strong>Weight in Score:</strong> 40%</p>
+        <p><strong>Decay Rate:</strong> -30% per hour</p>
+      </div>
+    </div>
   </Card>
   
-  <Card title="Happiness">
-    Your pet's contentment level
-    
-    **Weight in Score:** 20%
-    
-    **Decay Rate:** -25% per hour
+  <Card>
+    <div className="flex items-center">
+      <div className="mr-3 text-green-500">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+      </div>
+      <div>
+        <h3 className="font-semibold">Happiness</h3>
+        <p>Your pet's contentment level</p>
+        <p><strong>Weight in Score:</strong> 20%</p>
+        <p><strong>Decay Rate:</strong> -25% per hour</p>
+      </div>
+    </div>
   </Card>
   
-  <Card title="Cleanliness">
-    How clean your pet is
-    
-    **Weight in Score:** 20%
-    
-    **Decay Rate:** -20% per hour
+  <Card>
+    <div className="flex items-center">
+      <div className="mr-3 text-green-500">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      </div>
+      <div>
+        <h3 className="font-semibold">Cleanliness</h3>
+        <p>How clean your pet is</p>
+        <p><strong>Weight in Score:</strong> 20%</p>
+        <p><strong>Decay Rate:</strong> -20% per hour</p>
+      </div>
+    </div>
   </Card>
   
-  <Card title="Energy">
-    Your pet's activity level
-    
-    **Weight in Score:** 20%
-    
-    **Decay Rate:** -15% per hour
+  <Card>
+    <div className="flex items-center">
+      <div className="mr-3 text-green-500">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+      </div>
+      <div>
+        <h3 className="font-semibold">Energy</h3>
+        <p>Your pet's activity level</p>
+        <p><strong>Weight in Score:</strong> 20%</p>
+        <p><strong>Decay Rate:</strong> -15% per hour</p>
+      </div>
+    </div>
   </Card>
 </CardGroup>
 
@@ -69,13 +99,3 @@ When attributes fall below certain levels, your pet experiences negative effects
 | Hungry | ~3.5 hours | -75% earning rate |
 | Severely Hungry | ~4.25 hours | -95% earning rate |
 | Death | 8-10 hours | No earnings, requires revival |
-
-## Sleep Mode
-
-<Accordion title="Sleep Mode Benefits">
-  When activated, Sleep Mode reduces attribute decay by 70% for 6-8 hours, allowing you to maintain better pet health during overnight periods or when you can't actively care for your pet.
-</Accordion>
-
-<Tip>
-Always activate Sleep Mode before extended absences to protect your earning potential.
-</Tip>
