@@ -13,63 +13,78 @@ Understanding the core attributes and needs of your GOCHI pet
 
 Every GOCHI pet has four primary attributes that determine its overall wellbeing and earning potential:
 
-<CardGroup cols={2}>
-  <Card>
-    <div className="flex items-center">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div className="border border-gray-200 rounded-lg p-5">
+    <div className="flex items-start">
       <div className="mr-3 text-green-500">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 2H18C19.1 2 20 2.9 20 4V4C20 5.1 19.1 6 18 6H4C2.9 6 2 5.1 2 4V4C2 2.9 2.9 2 4 2Z" fill="#10B981"/>
+          <path d="M4 8H18C19.1 8 20 8.9 20 10V16C20 18.2 18.2 20 16 20H6C3.8 20 2 18.2 2 16V10C2 8.9 2.9 8 4 8Z" fill="#10B981"/>
+          <path d="M12 6V20" stroke="white" strokeWidth="1.5"/>
+        </svg>
       </div>
       <div>
-        <h3 className="font-semibold">Hunger</h3>
-        <p>How well-fed your pet is</p>
-        <p><strong>Weight in Score:</strong> 40%</p>
+        <h3 className="font-semibold text-lg mb-1">Hunger</h3>
+        <p className="text-gray-600 mb-1">How well-fed your pet is</p>
+        <p className="mb-1"><strong>Weight in Score:</strong> 40%</p>
         <p><strong>Decay Rate:</strong> -30% per hour</p>
       </div>
     </div>
-  </Card>
+  </div>
   
-  <Card>
-    <div className="flex items-center">
+  <div className="border border-gray-200 rounded-lg p-5">
+    <div className="flex items-start">
       <div className="mr-3 text-green-500">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="#10B981" strokeWidth="2"/>
+          <path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14" stroke="#10B981" strokeWidth="2" strokeLinecap="round"/>
+          <circle cx="9" cy="9" r="1" fill="#10B981"/>
+          <circle cx="15" cy="9" r="1" fill="#10B981"/>
+        </svg>
       </div>
       <div>
-        <h3 className="font-semibold">Happiness</h3>
-        <p>Your pet's contentment level</p>
-        <p><strong>Weight in Score:</strong> 20%</p>
+        <h3 className="font-semibold text-lg mb-1">Happiness</h3>
+        <p className="text-gray-600 mb-1">Your pet's contentment level</p>
+        <p className="mb-1"><strong>Weight in Score:</strong> 20%</p>
         <p><strong>Decay Rate:</strong> -25% per hour</p>
       </div>
     </div>
-  </Card>
+  </div>
   
-  <Card>
-    <div className="flex items-center">
+  <div className="border border-gray-200 rounded-lg p-5">
+    <div className="flex items-start">
       <div className="mr-3 text-green-500">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="#10B981" strokeWidth="2"/>
+          <path d="M12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18" stroke="#10B981" strokeWidth="2"/>
+          <path d="M12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18" stroke="#10B981" strokeWidth="2"/>
+        </svg>
       </div>
       <div>
-        <h3 className="font-semibold">Cleanliness</h3>
-        <p>How clean your pet is</p>
-        <p><strong>Weight in Score:</strong> 20%</p>
+        <h3 className="font-semibold text-lg mb-1">Cleanliness</h3>
+        <p className="text-gray-600 mb-1">How clean your pet is</p>
+        <p className="mb-1"><strong>Weight in Score:</strong> 20%</p>
         <p><strong>Decay Rate:</strong> -20% per hour</p>
       </div>
     </div>
-  </Card>
+  </div>
   
-  <Card>
-    <div className="flex items-center">
+  <div className="border border-gray-200 rounded-lg p-5">
+    <div className="flex items-start">
       <div className="mr-3 text-green-500">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
       </div>
       <div>
-        <h3 className="font-semibold">Energy</h3>
-        <p>Your pet's activity level</p>
-        <p><strong>Weight in Score:</strong> 20%</p>
+        <h3 className="font-semibold text-lg mb-1">Energy</h3>
+        <p className="text-gray-600 mb-1">Your pet's activity level</p>
+        <p className="mb-1"><strong>Weight in Score:</strong> 20%</p>
         <p><strong>Decay Rate:</strong> -15% per hour</p>
       </div>
     </div>
-  </Card>
-</CardGroup>
+  </div>
+</div>
 
 ## Attribute Decay
 
