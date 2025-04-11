@@ -14,92 +14,32 @@ Understanding the core attributes and needs of your GOCHI pet
 Every GOCHI pet has four primary attributes that determine its overall wellbeing and earning potential:
 
 
-title: 'Pet Stats & Needs'
-description: 'Understanding the core attributes and needs of your GOCHI pet'
-<style>
-{`
-  .stat-card {
-    padding: 1.5rem;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  .stat-name {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-  .stat-desc {
-    margin-top: 0.5rem;
-    margin-bottom: 0.75rem;
-    color: #4b5563;
-  }
-  .stat-value {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-  .icon {
-    color: #10B981;
-    margin-right: 1rem;
-  }
-`}
-</style>
-Core Attributes
-Every GOCHI pet has four primary attributes that determine its overall wellbeing and earning potential:
-<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-  <div className="stat-card">
-    <div className="flex items-start">
-      <div className="icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 10h2a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-2"/><path d="M6 8h8v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V8z"/><path d="M12 8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h5z"/></svg>
-      </div>
-      <div>
-        <div className="stat-name">Hunger</div>
-        <div className="stat-desc">How well-fed your pet is</div>
-        <div className="stat-value"><strong>Weight in Score:</strong> 40%</div>
-        <div className="stat-value"><strong>Decay Rate:</strong> -30% per hour</div>
-      </div>
-    </div>
-  </div>
-  <div className="stat-card">
-    <div className="flex items-start">
-      <div className="icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-      </div>
-      <div>
-        <div className="stat-name">Happiness</div>
-        <div className="stat-desc">Your pet's contentment level</div>
-        <div className="stat-value"><strong>Weight in Score:</strong> 20%</div>
-        <div className="stat-value"><strong>Decay Rate:</strong> -25% per hour</div>
-      </div>
-    </div>
-  </div>
-  <div className="stat-card">
-    <div className="flex items-start">
-      <div className="icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8 2h8a2 2 0 0 1 2 2v2h1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-1v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-8H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1V4a2 2 0 0 1 2-2z"/></svg>
-      </div>
-      <div>
-        <div className="stat-name">Cleanliness</div>
-        <div className="stat-desc">How clean your pet is</div>
-        <div className="stat-value"><strong>Weight in Score:</strong> 20%</div>
-        <div className="stat-value"><strong>Decay Rate:</strong> -20% per hour</div>
-      </div>
-    </div>
-  </div>
-  <div className="stat-card">
-    <div className="flex items-start">
-      <div className="icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-      </div>
-      <div>
-        <div className="stat-name">Energy</div>
-        <div className="stat-desc">Your pet's activity level</div>
-        <div className="stat-value"><strong>Weight in Score:</strong> 20%</div>
-        <div className="stat-value"><strong>Decay Rate:</strong> -15% per hour</div>
-      </div>
-    </div>
-  </div>
-</div>
+<CardGroup cols={2}>
+  <Card title="Hunger" icon="bowl-food">
+    How well-fed your pet is
+**Weight in Score:** 40%
+
+**Decay Rate:** -30% per hour
+  </Card>
+  <Card title="Happiness" icon="face-smile">
+    Your pet's contentment level
+**Weight in Score:** 20%
+
+**Decay Rate:** -25% per hour
+  </Card>
+  <Card title="Cleanliness" icon="shower">
+    How clean your pet is
+**Weight in Score:** 20%
+
+**Decay Rate:** -20% per hour
+  </Card>
+  <Card title="Energy" icon="bolt">
+    Your pet's activity level
+**Weight in Score:** 20%
+
+**Decay Rate:** -15% per hour
+  </Card>
+</CardGroup>
 
 ## Attribute Decay
 
