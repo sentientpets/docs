@@ -13,32 +13,60 @@ Understanding the core attributes and needs of your GOCHI pet
 
 Every GOCHI pet has four primary attributes that determine its overall wellbeing and earning potential:
 
-<CardGroup cols={2}>
-  <Card title="Hunger" icon="bowl-food">
-    How well-fed your pet is
-**Weight in Score:** 40%
-
-**Decay Rate:** -30% per hour
-  </Card>
-  <Card title="Happiness" icon="face-smile">
-    Your pet's contentment level
-**Weight in Score:** 20%
-
-**Decay Rate:** -25% per hour
-  </Card>
-  <Card title="Cleanliness" icon="shower">
-    How clean your pet is
-**Weight in Score:** 20%
-
-**Decay Rate:** -20% per hour
-  </Card>
-  <Card title="Energy" icon="bolt">
-    Your pet's activity level
-**Weight in Score:** 20%
-
-**Decay Rate:** -15% per hour
-  </Card>
-</CardGroup>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div className="stat-card">
+    <div className="flex items-start">
+      <div className="text-green-500 mr-4">
+        <span className="text-2xl">🥣</span>
+      </div>
+      <div>
+        <div className="stat-name">Hunger</div>
+        <div className="stat-desc">How well-fed your pet is</div>
+        <div className="stat-value"><strong>Weight in Score:</strong> 40%</div>
+        <div className="stat-value"><strong>Decay Rate:</strong> -30% per hour</div>
+      </div>
+    </div>
+  </div>
+  <div className="stat-card">
+    <div className="flex items-start">
+      <div className="text-green-500 mr-4">
+        <span className="text-2xl">😊</span>
+      </div>
+      <div>
+        <div className="stat-name">Happiness</div>
+        <div className="stat-desc">Your pet's contentment level</div>
+        <div className="stat-value"><strong>Weight in Score:</strong> 20%</div>
+        <div className="stat-value"><strong>Decay Rate:</strong> -25% per hour</div>
+      </div>
+    </div>
+  </div>
+  <div className="stat-card">
+    <div className="flex items-start">
+      <div className="text-green-500 mr-4">
+        <span className="text-2xl">✨</span>
+      </div>
+      <div>
+        <div className="stat-name">Cleanliness</div>
+        <div className="stat-desc">How clean your pet is</div>
+        <div className="stat-value"><strong>Weight in Score:</strong> 20%</div>
+        <div className="stat-value"><strong>Decay Rate:</strong> -20% per hour</div>
+      </div>
+    </div>
+  </div>
+  <div className="stat-card">
+    <div className="flex items-start">
+      <div className="text-green-500 mr-4">
+        <span className="text-2xl">⚡</span>
+      </div>
+      <div>
+        <div className="stat-name">Energy</div>
+        <div className="stat-desc">Your pet's activity level</div>
+        <div className="stat-value"><strong>Weight in Score:</strong> 20%</div>
+        <div className="stat-value"><strong>Decay Rate:</strong> -15% per hour</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Attribute Decay
 
