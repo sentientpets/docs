@@ -44,28 +44,28 @@
           {
             "group": "Earning Mechanics",
             "pages": [
-              "earning-mechanics/care-to-earn",
-              "earning-mechanics/token-holding-benefits",
-              "earning-mechanics/reward-distribution",
-              "earning-mechanics/economic-model"
+              "Care-To-Earn",
+              "Token-Holding-Benefits",
+              "Reward-Distribution",
+              "Economic-Model"
             ]
           },
           {
             "group": "Points System",
             "pages": [
-              "points-system/pre-launch-points",
-              "points-system/referral-system",
-              "points-system/points-conversion",
-              "points-system/post-launch-transition"
+              "Pre-Launch-Points",
+              "Referral-System",
+              "Points-Conversion",
+              "Post-Launch-Transition"
             ]
           },
           {
             "group": "Tokenomics",
             "pages": [
-              "tokenomics/token-overview",
-              "tokenomics/tax-system",
-              "tokenomics/distribution-model",
-              "tokenomics/token-economics"
+              "Token-Overview",
+              "Tax-System",
+              "Distribution-Model",
+              "Token-Economics"
             ]
           }
         ]
