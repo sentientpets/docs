@@ -1,0 +1,133 @@
+---
+title: 'Token Holding Benefits'
+description: 'How holding $PURR tokens multiplies your earning potential'
+---
+
+GOCHI's economic model includes significant benefits for token holders, creating a powerful incentive for long-term investment in the ecosystem. By holding $PURR tokens, you can dramatically increase your earning potential.
+
+## Holding Multiplier System
+
+Token holders receive substantial earning bonuses through the Holding Multiplier system:
+
+<Frame>
+  <img src="/images/holding-multiplier.png" alt="GOCHI Holding Multiplier Curve" />
+</Frame>
+
+| Holding Tier | Token Amount | Multiplier | Effect on Rewards |
+|--------------|--------------|------------|-------------------|
+| Non-holder | 0 $PURR | 0.2× | -80% reward penalty |
+| Basic Holder | 10,000 $PURR | 1.0× | Standard rewards (baseline) |
+| Committed Holder | 100,000 $PURR | 2.0× | Double rewards |
+| Significant Holder | 1,000,000 $PURR | 4.0× | Quadruple rewards |
+| Whale | 10,000,000+ $PURR | 8.0× | Eight times standard rewards |
+
+<Note>
+The Holding Multiplier applies to all rewards earned through pet care, creating a powerful compound effect when combined with excellent care quality.
+</Note>
+
+## Multiplier Formula
+
+The multiplier is calculated using a power function that creates a balanced curve:
+
+```javascript
+// Token Holding Multiplier Formula
+function calculateHoldingMultiplier(tokenBalance) {
+  return Math.min(0.2 + Math.pow((tokenBalance / 10000), 0.7), 8.0);
+}
+```
+
+This formula ensures that:
+
+<CardGroup cols={3}>
+  <Card title="Incremental Growth" icon="chart-line">
+    Every token holding increases rewards
+  </Card>
+  <Card title="Balanced Scaling" icon="scale-balanced">
+    Returns scale significantly with investment
+  </Card>
+  <Card title="Fair Ceiling" icon="arrow-up-right-dots">
+    The system has a reasonable ceiling to prevent extreme advantage
+  </Card>
+</CardGroup>
+
+## Compound Effect
+
+The holding multiplier creates a compound effect when combined with Care Quality:
+
+```mermaid
+graph TD
+    A[Total Reward] --> B[Care Quality Score]
+    A --> C[Holding Multiplier]
+    B --> D[Based on pet care]
+    C --> E[Based on token holdings]
+    D --> F[0.5× to 3.0× base rate]
+    E --> G[0.2× to 8.0× multiplier]
+    F --> H[Combined Multiplier]
+    G --> H
+    H --> I[Final Reward]
+```
+
+This dual multiplier system creates powerful incentives for both active gameplay and token investment.
+
+## Investment Strategies
+
+<AccordionGroup>
+  <Accordion title="Balanced Approach">
+    **Strategy:** Maintain modest token holdings while focusing on excellent care
+    
+    **Example:** 10,000 $PURR + Excellent Care (3.0×)
+    = 1.0 × 3.0 = 3.0× total multiplier
+    
+    **Best For:** Active players with limited investment capital
+    
+    **ROI Potential:** ~450% annual (assuming consistent excellent care)
+  </Accordion>
+  
+  <Accordion title="Token-Focused">
+    **Strategy:** Prioritize acquiring significant token holdings for multiplier effect
+    
+    **Example:** 1,000,000 $PURR + Average Care (1.0×)
+    = 4.0 × 1.0 = 4.0× total multiplier
+    
+    **Best For:** Investors who play more casually but want significant returns
+    
+    **ROI Potential:** ~180% annual (with just average care quality)
+  </Accordion>
+  
+  <Accordion title="Maximalist Approach">
+    **Strategy:** Combine large token holdings with excellent pet care
+    
+    **Example:** 1,000,000 $PURR + Excellent Care (3.0×)
+    = 4.0 × 3.0 = 12.0× total multiplier
+    
+    **Best For:** Dedicated players willing to make significant investment
+    
+    **ROI Potential:** ~540% annual (excellent care + significant holding)
+  </Accordion>
+</AccordionGroup>
+
+## Token Utility Beyond Multipliers
+
+While the holding multiplier is the primary benefit, $PURR tokens have additional utility:
+
+<CardGroup cols={2}>
+  <Card title="Premium Features" icon="wand-magic-sparkles">
+    **Premium Foods:** Enhance pet stats recovery
+    
+    **Special Items:** Unlock unique interactions
+    
+    **Environmental Themes:** Customize your pet's living space
+  </Card>
+  
+  <Card title="Ecosystem Participation" icon="users-gear">
+    **Pet Creation:** Required for creating new pets post-launch
+    
+    **Governance:** Future voting rights on project direction (planned)
+    
+    **Special Events:** Priority access to limited-time activities
+  </Card>
+</CardGroup>
+
+<Tip>
+Consider reinvesting a portion of your SOL rewards into $PURR tokens to gradually increase your holding multiplier over time. This strategy creates a virtuous cycle of increasing returns.
+</Tip>

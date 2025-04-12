@@ -1,0 +1,140 @@
+---
+title: 'Reward Distribution'
+description: 'How GOCHI distributes SOL rewards to players'
+---
+
+Unlike many projects that distribute rewards daily or weekly, GOCHI operates on an hourly distribution cycle to maximize engagement and provide immediate feedback on care quality.
+
+## Hourly Distribution Cycle
+
+<Frame>
+  <img src="/images/hourly-distribution.png" alt="GOCHI Hourly Distribution Cycle" />
+</Frame>
+
+### How It Works
+
+```mermaid
+sequenceDiagram
+    participant User as Player
+    participant Pet as Pet Care Interface
+    participant System as Reward System
+    participant Wallet as Player Wallet
+    
+    User->>Pet: Provides care
+    Pet->>System: Reports care quality
+    Note over System: Calculates hourly reward
+    System-->>User: Sends reward notification
+    User->>System: Claims reward
+    System->>Wallet: Transfers SOL
+```
+
+<Steps>
+  <Step title="Reward Pool Calculation">
+    At the beginning of each hour, the system calculates the hourly reward pool:
+    
+    ```
+    HourlyRewardPool = DailyVolume × 0.05 ÷ 24
+    ```
+    
+    For example, with $5M daily volume:
+    $5,000,000 × 0.05 ÷ 24 = $10,416 per hour
+  </Step>
+  
+  <Step title="Individual Share Calculation">
+    Each player's share is determined by their Care Quality Score and Holding Multiplier:
+    
+    ```
+    UserShare = (UserWeightedPoints ÷ TotalWeightedPoints) × HourlyRewardPool
+    ```
+    
+    Where:
+    - UserWeightedPoints = UserCareQualityScore × UserHoldingMultiplier
+    - TotalWeightedPoints = Sum of all active users' weighted points
+  </Step>
+  
+  <Step title="Notification">
+    When rewards are available, you receive an in-app notification
+  </Step>
+  
+  <Step title="Claiming Process">
+    Claim your rewards with a single tap
+    Rewards are sent directly to your connected wallet
+    Unclaimed rewards accumulate until collected
+  </Step>
+</Steps>
+
+## Dynamic Adjustment System
+
+GOCHI's reward system includes dynamic adjustments to ensure sustainability across different market conditions:
+
+<CardGroup cols={2}>
+  <Card title="Volume-Based Scaling" icon="chart-line">
+    As trading volume increases, the reward pool grows proportionally, ensuring larger rewards during high activity periods.
+    
+    During low volume periods, rewards decrease but maintain reasonable minimum levels.
+  </Card>
+  
+  <Card title="Player Participation Adjustment" icon="users">
+    The system adjusts to player counts, ensuring fair distribution whether there are 1,000 or 100,000 active players.
+    
+    This prevents dilution of rewards as the player base grows.
+  </Card>
+</CardGroup>
+
+## Reward Example Scenarios
+
+Here are some example reward calculations for different player types:
+
+### Phase 1 (Launch - First Month)
+
+| Player Type | Care Quality | Holding | Hourly Reward | Daily Reward | Monthly Reward |
+|-------------|--------------|---------|--------------|--------------|----------------|
+| Basic Player | Average (1.0×) | None (0.2×) | $0.07 | $1.63 | $48.90 |
+| Token Holder | Average (1.0×) | 10K (1.0×) | $0.34 | $8.15 | $244.50 |
+| Care Expert | Excellent (3.0×) | None (0.2×) | $0.20 | $4.89 | $146.70 |
+| Balanced Player | Good (2.0×) | 10K (1.0×) | $0.68 | $16.30 | $489.00 |
+| Dedicated Player | Excellent (3.0×) | 100K (2.0×) | $2.03 | $48.90 | $1,467.00 |
+| Whale | Good (2.0×) | 10M (8.0×) | $5.44 | $130.50 | $3,915.00 |
+
+### Phase 3 (Maturity - 6+ Months)
+
+With a larger player base, the individual rewards adjust while maintaining attractive returns:
+
+| Player Type | Care Quality | Holding | Hourly Reward | Daily Reward | Monthly Reward |
+|-------------|--------------|---------|--------------|--------------|----------------|
+| Basic Player | Average (1.0×) | None (0.2×) | $0.03 | $0.68 | $20.40 |
+| Token Holder | Average (1.0×) | 10K (1.0×) | $0.14 | $3.40 | $102.00 |
+| Care Expert | Excellent (3.0×) | None (0.2×) | $0.09 | $2.04 | $61.20 |
+| Balanced Player | Good (2.0×) | 10K (1.0×) | $0.28 | $6.80 | $204.00 |
+| Dedicated Player | Excellent (3.0×) | 100K (2.0×) | $0.85 | $20.40 | $612.00 |
+| Whale | Good (2.0×) | 10M (8.0×) | $2.27 | $54.40 | $1,632.00 |
+
+<Warning>
+These figures are estimates based on projected trading volume of $5M daily. Actual rewards will vary based on real-time market conditions, trading volume, and player participation.
+</Warning>
+
+## Reward Claiming Best Practices
+
+<AccordionGroup>
+  <Accordion title="Optimal Claiming Frequency">
+    While rewards are distributed hourly, you don't need to claim every hour. Consider these approaches:
+    
+    - **Power Users:** Claim 2-3 times daily during active periods
+    - **Daily Players:** Claim once daily to minimize transaction friction
+    - **Casual Players:** Claim weekly to accumulate meaningful amounts
+    
+    There is no expiration on unclaimed rewards, so you can develop a claiming schedule that works for you.
+  </Accordion>
+  
+  <Accordion title="Gas Optimization">
+    Each claim transaction requires a small amount of SOL for gas fees. To optimize:
+    
+    - Consider claiming during periods of lower network congestion
+    - Batch your claims rather than claiming very small amounts frequently
+    - The system is designed to ensure claim fees never exceed the reward value
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+The hourly reward cycle creates a powerful "dopamine loop" that encourages frequent engagement. Each time you care for your pet, you not only improve its wellbeing but also see the direct impact on your earnings in near real-time.
+</Tip>

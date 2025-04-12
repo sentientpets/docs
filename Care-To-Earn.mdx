@@ -1,0 +1,123 @@
+---
+title: 'Care to Earn'
+description: 'How GOCHI converts quality pet care into rewards'
+---
+
+GOCHI's core innovation is its care-to-earn model, which rewards players for providing quality care to their virtual companions. Unlike traditional play-to-earn games that often rely on grinding repetitive tasks, GOCHI creates value through meaningful interaction and consistent engagement.
+
+## Care Quality Score
+
+The foundation of GOCHI's reward system is the Care Quality Score—a comprehensive metric that evaluates how well you're caring for your pet.
+
+<CardGroup cols={2}>
+  <Card title="Score Components" icon="chart-pie">
+    Your Care Quality Score incorporates several factors:
+    
+    - **Stat Averages**: 40% (hunger, happiness, cleanliness, energy)
+    - **Interaction Frequency**: 30% (regular check-ins)
+    - **Stat Stability**: 20% (avoiding critical thresholds)
+    - **Interaction Variety**: 10% (diverse care activities)
+  </Card>
+  
+  <Card title="Score Calculation" icon="calculator">
+    ```javascript
+    function calculateCareQualityScore(pet, interactions) {
+      const statAverage = (pet.hunger + pet.happiness + 
+        pet.cleanliness + pet.energy) / 4;
+      const statWeight = 0.4;
+      
+      const interactionFrequency = 
+        calculateFrequency(interactions);
+      const frequencyWeight = 0.3;
+      
+      const statStability = 
+        calculateStability(pet.history);
+      const stabilityWeight = 0.2;
+      
+      const interactionVariety = 
+        calculateVariety(interactions);
+      const varietyWeight = 0.1;
+      
+      return (statAverage * statWeight) + 
+             (interactionFrequency * frequencyWeight) + 
+             (statStability * stabilityWeight) + 
+             (interactionVariety * varietyWeight);
+    }
+    ```
+  </Card>
+</CardGroup>
+
+## Earning Tiers
+
+Your Care Quality Score determines your base earning rate:
+
+| Care Quality | Score Range | Multiplier | Requirements |
+|--------------|-------------|------------|--------------|
+| Excellent | 90-100 | 3.0× | All stats above 90%, optimal interaction frequency and variety |
+| Good | 70-89 | 2.0× | All stats above 70%, regular interactions |
+| Average | 50-69 | 1.0× | All stats above 50%, basic care routine |
+| Poor | 30-49 | 0.5× | One or more stats below 50% |
+| Critical | 0-29 | 0.1× | One or more stats below 30% |
+
+<Note>
+These multipliers apply to your base earning rate before token holding bonuses are calculated. The combined effect of excellent care and substantial token holdings creates a powerful earning opportunity.
+</Note>
+
+## Optimization Strategies
+
+<AccordionGroup>
+  <Accordion title="Stat Management">
+    - Focus on hunger first (highest weight and fastest decay)
+    - Maintain all stats above 70% for optimal scoring
+    - Address stats before they fall below critical thresholds
+    - Use premium foods strategically before longer absences
+  </Accordion>
+  
+  <Accordion title="Interaction Planning">
+    - Aim for 8-10 interactions during your pet's active period
+    - Space interactions throughout the day rather than clustering them
+    - Use varied care activities rather than repeating the same ones
+    - Activate Sleep Mode before extended absences
+  </Accordion>
+  
+  <Accordion title="Advanced Techniques">
+    - Build care streaks by interacting at similar times each day
+    - Combine token holding with excellent care for maximum returns
+    - Learn your pet's personality preferences to optimize happiness gains
+    - Use the "care cascade" approach: multiple short sessions spaced 1-2 hours apart
+  </Accordion>
+</AccordionGroup>
+
+## Anti-Exploitation Measures
+
+GOCHI is designed to reward genuine, thoughtful care rather than mechanical interactions or exploitation.
+
+```mermaid
+graph TD
+    A[Anti-Exploitation Measures] --> B[Diminishing Returns]
+    A --> C[Pattern Recognition]
+    A --> D[Interaction Quality]
+    B --> B1[Rapid repeated actions become less effective]
+    C --> C1[AI detects and penalizes bot-like behavior]
+    D --> D1[Duration and timing of interactions matter]
+```
+
+<Warning>
+Attempts to automate interactions or use bot-like patterns of care will be detected by the AI system and result in reduced earnings. The system is designed to recognize and reward authentic care patterns that mirror real pet care.
+</Warning>
+
+## Real Earnings Example
+
+Based on $5M daily volume and 10,000 active players:
+
+| Player Type | Care Quality | Token Holdings | Daily Earnings | Monthly Earnings |
+|-------------|--------------|----------------|----------------|------------------|
+| Minimal Effort | Poor (0.5×) | None (0.2×) | $0.50 | $15.00 |
+| Basic Care | Average (1.0×) | None (0.2×) | $1.00 | $30.00 |
+| Dedicated Player | Good (2.0×) | 10K $PURR (1.0×) | $10.00 | $300.00 |
+| Optimal Player | Excellent (3.0×) | 100K $PURR (2.0×) | $30.00 | $900.00 |
+| Whale | Excellent (3.0×) | 10M $PURR (8.0×) | $120.00 | $3,600.00 |
+
+<Tip>
+Consistency is key! A regular care routine of moderate quality will generally outperform sporadic excellent care in the long run. Aim to establish a sustainable care pattern that fits your daily schedule.
+</Tip>
