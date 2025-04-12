@@ -1,0 +1,186 @@
+---
+title: 'Pre-Launch Points'
+description: 'Earning and accumulating points during GOCHI's pre-launch phase'
+---
+
+During GOCHI's pre-launch phase, players earn points rather than tokens. These points represent your future allocation of $PURR tokens when the project officially launches.
+
+## How Points Work
+
+<CardGroup cols={2}>
+  <Card title="Points Purpose" icon="bullseye">
+    Points serve as a record of your early contribution and engagement with GOCHI, determining your share of the initial token allocation.
+    
+    Think of points as your claim ticket for the $PURR token airdrop at launch.
+  </Card>
+  
+  <Card title="Points vs. Tokens" icon="scale-balanced">
+    Unlike tokens, points:
+    
+    - Cannot be transferred between accounts
+    - Have no monetary value until converted
+    - Exist only within the GOCHI platform
+    - Are not tradable on exchanges
+  </Card>
+</CardGroup>
+
+## Points Generation Mechanics
+
+Points are earned through pet care based on AI evaluation of:
+
+- Pet state quality (health, happiness, hunger, cleanliness)
+- Interaction frequency and consistency
+- Activity diversity and appropriateness
+
+### Base Point Calculation
+
+<Frame>
+  <img src="/images/points-calculation.png" alt="GOCHI Points Calculation" />
+</Frame>
+
+```javascript
+// How points are calculated hourly
+function calculateHourlyPoints(pet, player) {
+  // Base rate of points per hour
+  const baseRate = 10;
+  
+  // Quality multiplier based on pet state (0.5 to 3.0)
+  const qualityMultiplier = calculateQualityMultiplier(pet);
+  
+  // Streak multiplier based on consecutive days (1.0 to 1.5)
+  const streakMultiplier = 1.0 + Math.min(player.consecutiveDays * 0.05, 0.5);
+  
+  return baseRate * qualityMultiplier * streakMultiplier;
+}
+
+// Calculate quality multiplier based on pet stats
+function calculateQualityMultiplier(pet) {
+  // Average of all pet stats
+  const avgStats = (pet.hunger + pet.happiness + 
+                    pet.cleanliness + pet.energy) / 4;
+  
+  if (avgStats >= 90) return 3.0;      // Excellent care
+  else if (avgStats >= 70) return 2.0; // Good care
+  else if (avgStats >= 50) return 1.0; // Average care
+  else if (avgStats >= 30) return 0.5; // Poor care
+  else return 0.2;                     // Critical care
+}
+```
+
+### Quality Multiplier
+
+<CardGroup cols={3}>
+  <Card title="Excellent Care" icon="trophy">
+    **Multiplier:** 3.0×
+    
+    **Requirement:** Average stats ≥90%
+    
+    **Example:** 10 base points × 3.0 = 30 points/hour
+  </Card>
+  
+  <Card title="Good Care" icon="thumbs-up">
+    **Multiplier:** 2.0×
+    
+    **Requirement:** Average stats ≥70%
+    
+    **Example:** 10 base points × 2.0 = 20 points/hour
+  </Card>
+  
+  <Card title="Average Care" icon="check">
+    **Multiplier:** 1.0×
+    
+    **Requirement:** Average stats ≥50%
+    
+    **Example:** 10 base points × 1.0 = 10 points/hour
+  </Card>
+</CardGroup>
+
+### Streak Multiplier
+
+The streak multiplier rewards consistent daily engagement:
+
+```
+StreakMultiplier = 1.0 + (ConsecutiveDays × 0.05), capped at 1.5
+```
+
+| Consecutive Days | Streak Multiplier | Effect on Points |
+|------------------|-------------------|------------------|
+| 1 | 1.05× | +5% |
+| 5 | 1.25× | +25% |
+| 10+ | 1.5× | +50% (maximum) |
+
+<Tip>
+Logging in and caring for your pet every day builds a valuable streak multiplier. Even minimal care on busy days helps maintain your streak and earn extra points!
+</Tip>
+
+## Pre-Launch Farming Limitations
+
+To prevent excessive rewards during pre-launch:
+
+### Daily Points Cap
+
+```javascript
+// Daily points cap increases with consecutive activity
+function calculateDailyPointsCap(player) {
+  // Base cap for new players
+  const baseCap = 200;
+  
+  // Cap increases by 20 points per active day
+  const increase = Math.min(player.daysActive * 20, 300);
+  
+  // Maximum daily cap is 500 points
+  return Math.min(baseCap + increase, 500);
+}
+```
+
+<AccordionGroup>
+  <Accordion title="Daily Cap Progression">
+    | Active Days | Daily Cap | Explanation |
+    |------------|-----------|-------------|
+    | 1 | 200 | Base cap for new players |
+    | 5 | 300 | 200 + (5 × 20) = 300 |
+    | 10 | 400 | 200 + (10 × 20) = 400 |
+    | 15+ | 500 | Maximum daily cap |
+  </Accordion>
+  
+  <Accordion title="Daily Cap Example">
+    A player with excellent care (3.0×) and a 10-day streak (1.5×):
+    
+    - Base earning rate: 10 points/hour
+    - With multipliers: 10 × 3.0 × 1.5 = 45 points/hour
+    - Potential 24-hour earnings: 45 × 24 = 1,080 points
+    - With 10-day cap: Limited to 400 points/day
+    
+    This system rewards quality care while preventing excessive farming.
+  </Accordion>
+</AccordionGroup>
+
+### Total Pre-Launch Points Cap
+
+```
+TotalPointsCap = 10,000 + (ReferralsCount × 500), maximum 20,000
+```
+
+This allows dedicated players and effective promoters to earn more but establishes a reasonable ceiling.
+
+<Note>
+Once you reach your total points cap, you can continue playing and caring for your pet, but you won't earn additional points. Your care quality will still be tracked for gameplay progression and pet development.
+</Note>
+
+## Points Tracking
+
+<Frame>
+  <img src="/images/points-tracking.png" alt="GOCHI Points Tracking Dashboard" />
+</Frame>
+
+The GOCHI interface provides clear visibility into your points:
+
+- Current points balance
+- Points earned today
+- Progress toward daily cap
+- Progress toward total cap
+- Points earning rate
+- Leaderboard position
+
+<Warning>
+Your points balance and earning rate are subject to audit before the final snapshot. Any accounts showing evidence of exploitation or automation may have their points
