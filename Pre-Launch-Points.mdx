@@ -1,255 +1,340 @@
 ---
 title: 'Pre-Launch Points'
-description: 'Earn points before launch that convert to $PURR tokens upon release'
+description: 'Earning and accumulating points during GOCHI's pre-launch phase'
 ---
 
-# Pre-Launch Points System
+During GOCHI's pre-launch phase, players earn points rather than tokens. These points represent your future allocation of $PURR tokens when the project officially launches.
 
-Before $PURR tokens are officially launched, GOCHI operates on a points-based system that tracks your engagement and care quality, determining your future token allocation.
+## How Points Work
 
-<Tabs>
-  <Tab title="Point Basics">
-    <div className="mt-4">
-      <h3>What Are Points?</h3>
-      <p>Points represent your contribution to the GOCHI ecosystem during pre-launch. Unlike tokens, points cannot be transferred or traded - they're tied directly to your wallet.</p>
-      
-      <h3>Why Points Matter</h3>
-      <p>The more points you accumulate before launch, the larger your $PURR token allocation will be when the token goes live.</p>
-      
-      <Note>
-        Points serve as your claim ticket to $PURR tokens. Your percentage of the total points pool determines your share of the 150,000,000 $PURR tokens allocated to pre-launch participants.
-      </Note>
-    </div>
-  </Tab>
-  
-  <Tab title="Earning Points">
-    <div className="mt-4">
-      <h3>Points by Pet State</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>State Quality</th>
-            <th>Average Stats</th>
-            <th>Base Points/Hour</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Excellent</td>
-            <td>&gt;80%</td>
-            <td>30</td>
-          </tr>
-          <tr>
-            <td>Good</td>
-            <td>60-80%</td>
-            <td>20</td>
-          </tr>
-          <tr>
-            <td>Average</td>
-            <td>40-60%</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>Poor</td>
-            <td>20-40%</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td>Critical</td>
-            <td>&lt;20%</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td>Dead</td>
-            <td>0%</td>
-            <td>0</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div className="mt-6">
-      <h3>Pet Stat Weights</h3>
-      <p>Your pet's state is determined by the weighted average of its core attributes:</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Attribute</th>
-            <th>Weight</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Food</td>
-            <td>40%</td>
-          </tr>
-          <tr>
-            <td>Happiness</td>
-            <td>20%</td>
-          </tr>
-          <tr>
-            <td>Cleanliness</td>
-            <td>20%</td>
-          </tr>
-          <tr>
-            <td>Energy</td>
-            <td>20%</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </Tab>
-  
-  <Tab title="Multipliers">
-    <div className="mt-4">
-      <h3>Streak Multiplier</h3>
-      <p>Log in and care for your pet daily to earn streak bonuses:</p>
-      <code>
-        StreakMultiplier = 1.0 + (ConsecutiveDays × 0.05)
-        Maximum: 1.5 (after 10 days)
-      </code>
-      
-      <h3 className="mt-6">Referral Bonus</h3>
-      <p>Each new user you refer earns you a permanent +5% point earning boost:</p>
-      <code>
-        ReferralMultiplier = 1.0 + (ReferralCount × 0.05)
-        Maximum: 1.5 (after 10 referrals)
-      </code>
-      
-      <Accordion title="Referral Milestone Rewards">
-        <table>
-          <thead>
-            <tr>
-              <th>Referrals</th>
-              <th>Multiplier</th>
-              <th>Bonus Points</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>3</td>
-              <td>1.15×</td>
-              <td>+500 instant</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>1.25×</td>
-              <td>+1,000 instant</td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td>1.5×</td>
-              <td>+2,500 instant</td>
-            </tr>
-          </tbody>
-        </table>
-      </Accordion>
-    </div>
-  </Tab>
-  
-  <Tab title="Caps & Limits">
-    <div className="mt-4">
-      <h3>Daily Point Cap</h3>
-      <p>To maintain balance and prevent excessive farming, daily points are capped:</p>
-      <code>
-        DailyPointsCap = 200 + (DaysActive × 20)
-        Maximum: 500 (after 15 days)
-      </code>
-      
-      <Warning>
-        Points earned beyond your daily cap will not be counted, so plan your engagement strategically!
-      </Warning>
-      
-      <h3 className="mt-6">Total Point Cap</h3>
-      <p>Your total possible points during pre-launch are also capped:</p>
-      <code>
-        TotalPointsCap = 10,000 + (ReferralsCount × 500)
-        Maximum: 20,000 points
-      </code>
-      
-      <Tip>
-        Referring new users is the only way to increase your total point cap beyond the base 10,000 points.
-      </Tip>
-    </div>
-  </Tab>
-  
-  <Tab title="Token Conversion">
-    <div className="mt-4">
-      <h3>Conversion Formula</h3>
-      <p>When $PURR tokens launch, your accumulated points will convert to tokens based on this formula:</p>
-      <code>
-        TokenAllocation = (YourPoints ÷ TotalPointsPool) × 150,000,000
-      </code>
-      
-      <h3 className="mt-6">Allocation Protections</h3>
-      <ul>
-        <li>Minimum allocation: 1,000 tokens for accounts with ≥100 points</li>
-        <li>Maximum allocation: 500,000 tokens per account</li>
-      </ul>
-      
-      <Note>
-        15% of the total $PURR supply (150,000,000 tokens) is reserved for pre-launch participants.
-      </Note>
-      
-      <h3 className="mt-6">Bonus Allocations</h3>
-      
-      <h4>Leaderboard Bonuses</h4>
-      <table>
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Bonus</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Top 10</td>
-            <td>+20%</td>
-          </tr>
-          <tr>
-            <td>Top 100</td>
-            <td>+15%</td>
-          </tr>
-          <tr>
-            <td>Top 500</td>
-            <td>+10%</td>
-          </tr>
-          <tr>
-            <td>Top 1,000</td>
-            <td>+5%</td>
-          </tr>
-        </tbody>
-      </table>
-      
-      <h4 className="mt-4">Early Adopter Bonuses</h4>
-      <table>
-        <thead>
-          <tr>
-            <th>Join Period</th>
-            <th>Bonus</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Week 1-2</td>
-            <td>+20%</td>
-          </tr>
-          <tr>
-            <td>Week 3-4</td>
-            <td>+10%</td>
-          </tr>
-          <tr>
-            <td>Week 5+</td>
-            <td>Standard</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </Tab>
-</Tabs>
-
-<div className="mt-8">
-  <Card title="Ready to Continue Your Journey?" icon="arrow-right">
-    Learn about the transition to tokens in the <a href="/tokenomics/post-launch-transition">Post-Launch Transition</a> section.
+<CardGroup cols={2}>
+  <Card title="Points Purpose" icon="bullseye">
+    Points serve as a record of your early contribution and engagement with GOCHI, determining your share of the initial token allocation.
+    
+    Think of points as your claim ticket for the $PURR token airdrop at launch.
   </Card>
-</div>
+  
+  <Card title="Points vs. Tokens" icon="scale-balanced">
+    Unlike tokens, points:
+    
+    - Cannot be transferred between accounts
+    - Have no monetary value until converted
+    - Exist only within the GOCHI platform
+    - Are not tradable on exchanges
+  </Card>
+</CardGroup>
+
+## Points Generation Mechanics
+
+Points are earned through pet care based on AI evaluation of:
+
+- Pet state quality (health, happiness, hunger, cleanliness)
+- Interaction frequency and consistency
+- Activity diversity and appropriateness
+
+### Base Point Calculation
+
+<Frame>
+  <img src="/images/points-calculation.png" alt="GOCHI Points Calculation" />
+</Frame>
+
+```javascript
+// How points are calculated hourly
+function calculateHourlyPoints(pet, player) {
+  // Base rate of points per hour
+  const baseRate = 10;
+  
+  // Quality multiplier based on pet state (0.5 to 3.0)
+  const qualityMultiplier = calculateQualityMultiplier(pet);
+  
+  // Streak multiplier based on consecutive days (1.0 to 1.5)
+  const streakMultiplier = 1.0 + Math.min(player.consecutiveDays * 0.05, 0.5);
+  
+  return baseRate * qualityMultiplier * streakMultiplier;
+}
+
+// Calculate quality multiplier based on pet stats
+function calculateQualityMultiplier(pet) {
+  // Average of all pet stats
+  const avgStats = (pet.hunger + pet.happiness + 
+                    pet.cleanliness + pet.energy) / 4;
+  
+  if (avgStats >= 90) return 3.0;      // Excellent care
+  else if (avgStats >= 70) return 2.0; // Good care
+  else if (avgStats >= 50) return 1.0; // Average care
+  else if (avgStats >= 30) return 0.5; // Poor care
+  else return 0.2;                     // Critical care
+}
+```
+
+### Quality Multiplier
+
+<CardGroup cols={3}>
+  <Card title="Excellent Care" icon="trophy">
+    **Multiplier:** 3.0×
+    
+    **Requirement:** Average stats ≥90%
+    
+    **Example:** 10 base points × 3.0 = 30 points/hour
+  </Card>
+  
+  <Card title="Good Care" icon="thumbs-up">
+    **Multiplier:** 2.0×
+    
+    **Requirement:** Average stats ≥70%
+    
+    **Example:** 10 base points × 2.0 = 20 points/hour
+  </Card>
+  
+  <Card title="Average Care" icon="check">
+    **Multiplier:** 1.0×
+    
+    **Requirement:** Average stats ≥50%
+    
+    **Example:** 10 base points × 1.0 = 10 points/hour
+  </Card>
+</CardGroup>
+
+### Streak Multiplier
+
+The streak multiplier rewards consistent daily engagement:
+
+```
+StreakMultiplier = 1.0 + (ConsecutiveDays × 0.05), capped at 1.5
+```
+
+| Consecutive Days | Streak Multiplier | Effect on Points |
+|------------------|-------------------|------------------|
+| 1 | 1.05× | +5% |
+| 5 | 1.25× | +25% |
+| 10+ | 1.5× | +50% (maximum) |
+
+<Tip>
+Logging in and caring for your pet every day builds a valuable streak multiplier. Even minimal care on busy days helps maintain your streak and earn extra points!
+</Tip>
+
+## Pre-Launch Farming Limitations
+
+To prevent excessive rewards during pre-launch:
+
+### Daily Points Cap
+
+```javascript
+// Daily points cap increases with consecutive activity
+function calculateDailyPointsCap(player) {
+  // Base cap for new players
+  const baseCap = 200;
+  
+  // Cap increases by 20 points per active day
+  const increase = Math.min(player.daysActive * 20, 300);
+  
+  // Maximum daily cap is 500 points
+  return Math.min(baseCap + increase, 500);
+}
+```
+
+<AccordionGroup>
+  <Accordion title="Daily Cap Progression">
+    | Active Days | Daily Cap | Explanation |
+    |------------|-----------|-------------|
+    | 1 | 200 | Base cap for new players |
+    | 5 | 300 | 200 + (5 × 20) = 300 |
+    | 10 | 400 | 200 + (10 × 20) = 400 |
+    | 15+ | 500 | Maximum daily cap |
+  </Accordion>
+  
+  <Accordion title="Daily Cap Example">
+    A player with excellent care (3.0×) and a 10-day streak (1.5×):
+    
+    - Base earning rate: 10 points/hour
+    - With multipliers: 10 × 3.0 × 1.5 = 45 points/hour
+    - Potential 24-hour earnings: 45 × 24 = 1,080 points
+    - With 10-day cap: Limited to 400 points/day
+    
+    This system rewards quality care while preventing excessive farming.
+  </Accordion>
+</AccordionGroup>
+
+### Total Pre-Launch Points Cap
+
+```
+TotalPointsCap = 10,000 + (ReferralsCount × 500), maximum 20,000
+```
+
+This allows dedicated players and effective promoters to earn more but establishes a reasonable ceiling.
+
+<Note>
+Once you reach your total points cap, you can continue playing and caring for your pet, but you won't earn additional points. Your care quality will still be tracked for gameplay progression and pet development.
+</Note>
+
+## Points Tracking
+
+<Frame>
+  <img src="/images/points-tracking.png" alt="GOCHI Points Tracking Dashboard" />
+</Frame>
+
+The GOCHI interface provides clear visibility into your points:
+
+- Current points balance
+- Points earned today
+- Progress toward daily cap
+- Progress toward total cap
+- Points earning rate
+- Leaderboard position
+
+<Warning>
+Your points balance and earning rate are subject to audit before the final snapshot. Any accounts showing evidence of exploitation or automation may have their points adjusted or invalidated.
+</Warning>
+
+## Referral Program
+
+Referring new players is a powerful way to increase both your earning rate and maximum point cap.
+
+<CardGroup cols={2}>
+  <Card title="Referral Process" icon="share-nodes">
+    Share your unique referral link with friends. When they:
+    
+    1. Create a GOCHI account
+    2. Connect their wallet
+    3. Maintain an active pet for at least 3 days
+    
+    They're counted as a successful referral.
+  </Card>
+  
+  <Card title="Referral Benefits" icon="gift">
+    Each successful referral provides:
+    
+    - +5% to your point earning rate
+    - +500 to your total point cap
+    - One-time bonus of 100 points
+    - Special referral achievement badges
+  </Card>
+</CardGroup>
+
+### Milestone Rewards
+
+<table>
+  <thead>
+    <tr>
+      <th>Referrals</th>
+      <th>Total Earning Boost</th>
+      <th>Cap Increase</th>
+      <th>Special Reward</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3</td>
+      <td>+15%</td>
+      <td>+1,500</td>
+      <td>Unique pet accessory</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>+25%</td>
+      <td>+2,500</td>
+      <td>Rare pet background</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>+50%</td>
+      <td>+5,000</td>
+      <td>Exclusive pet variant</td>
+    </tr>
+  </tbody>
+</table>
+
+<Tip>
+Both you and your referred friends benefit! New players who join through a referral link receive a 10% point boost for their first week.
+</Tip>
+
+## Token Conversion
+
+When GOCHI officially launches, your accumulated points will be converted to $PURR tokens according to this formula:
+
+```
+Individual Token Allocation = (Individual Points ÷ Total Points Pool) × 150,000,000
+```
+
+Where:
+- Individual Points = Your total accumulated points at snapshot
+- Total Points Pool = Sum of all eligible players' points
+- 150,000,000 = Number of $PURR tokens allocated to pre-launch participants (15% of total supply)
+
+### Allocation Safeguards
+
+To ensure fair distribution:
+
+- Minimum allocation: 1,000 $PURR tokens for any account with ≥100 points
+- Maximum allocation: 500,000 $PURR tokens per account (0.05% of total supply)
+- Snapshot timing: Announced 48 hours in advance
+- Distribution: Tokens sent directly to connected wallets within 24 hours of launch
+
+<Warning>
+To be eligible for token allocation, your wallet must have been active within 7 days of the final snapshot. Dormant accounts may be excluded from distribution.
+</Warning>
+
+## Leaderboard & Ranking
+
+The pre-launch phase features a global leaderboard displaying the top point earners. Your position affects your token allocation.
+
+<table>
+  <thead>
+    <tr>
+      <th>Leaderboard Position</th>
+      <th>Bonus Allocation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Top 10</td>
+      <td>+20%</td>
+    </tr>
+    <tr>
+      <td>Top 100</td>
+      <td>+15%</td>
+    </tr>
+    <tr>
+      <td>Top 500</td>
+      <td>+10%</td>
+    </tr>
+    <tr>
+      <td>Top 1,000</td>
+      <td>+5%</td>
+    </tr>
+  </tbody>
+</table>
+
+## Early Adoption Bonus
+
+Joining early increases your token allocation:
+
+- Week 1-2 participants: +20% bonus allocation
+- Week 3-4 participants: +10% bonus allocation
+- Week 5+ participants: Standard allocation
+
+This bonus is calculated after your base allocation is determined.
+
+## Points to $PURR: Strategic Tips
+
+<CardGroup cols={2}>
+  <Card title="Maximize Daily Consistency" icon="calendar-check">
+    Even brief daily logins to maintain your pet's health are better than occasional intensive sessions. The streak multiplier compounds your earnings significantly over time.
+  </Card>
+  
+  <Card title="Focus on Quality Care" icon="star">
+    Maintaining excellent pet state (90%+ average stats) gives you 3× the base points. This multiplier has the biggest impact on your earnings.
+  </Card>
+  
+  <Card title="Build Your Network" icon="network-wired">
+    The referral program can double your earning potential between rate boosts and cap increases. Share your link with friends and gaming communities.
+  </Card>
+  
+  <Card title="Watch Your Caps" icon="chart-line">
+    Monitor your progress toward your daily and total caps. Earnings beyond these caps are lost, so plan your engagement strategically.
+  </Card>
+</CardGroup>
+
+<Card title="Ready to Start Earning?" icon="arrow-right">
+  Learn about GOCHI pet care in the [Pet Care Basics](/game-mechanics/pet-care) section.
+</Card>
