@@ -111,8 +111,8 @@
     }
   },
   "logo": {
-    "light": "https://cdn.discordapp.com/attachments/1066716537467187271/1359920865130582319/gochibanner3_3.png?ex=67f93c80&is=67f7eb00&hm=77c31cca77fb55edd95f44ee90e7102cf2705265d1bec61c3584969f2c51b4bb&",
-    "dark": "https://cdn.discordapp.com/attachments/1066716537467187271/1359920865130582319/gochibanner3_3.png?ex=67f93c80&is=67f7eb00&hm=77c31cca77fb55edd95f44ee90e7102cf2705265d1bec61c3584969f2c51b4bb&"
+    "light": "https://media.discordapp.net/attachments/1066716537467187271/1359920865130582319/gochibanner3_3.png?ex=67fb36c0&is=67f9e540&hm=a7484a82cf20d38233e0f7cf6e311de0855ab6a2814c80db46261363d5807f96&=&format=webp&quality=lossless&width=1637&height=545",
+    "dark": "https://media.discordapp.net/attachments/1066716537467187271/1359920865130582319/gochibanner3_3.png?ex=67fb36c0&is=67f9e540&hm=a7484a82cf20d38233e0f7cf6e311de0855ab6a2814c80db46261363d5807f96&=&format=webp&quality=lossless&width=1637&height=545"
   },
   "navbar": {
     "links": [
