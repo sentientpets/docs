@@ -13,17 +13,20 @@ The foundation of GOCHI's reward system is the Care Quality Score—a comprehens
   <Card title="Score Components" icon="chart-pie">
     Your Care Quality Score incorporates several factors:
     
-    - **Stat Averages**: 40% (hunger, happiness, cleanliness, energy)
-    - **Interaction Frequency**: 30% (regular check-ins)
-    - **Stat Stability**: 20% (avoiding critical thresholds)
-    - **Interaction Variety**: 10% (diverse care activities)
+    **Stat Averages:** 40% (hunger, happiness, cleanliness, energy)
+    
+    **Interaction Frequency:** 30% (regular check-ins)
+    
+    **Stat Stability:** 20% (avoiding critical thresholds)
+    
+    **Interaction Variety:** 10% (diverse care activities)
   </Card>
   
   <Card title="Score Calculation" icon="calculator">
     ```javascript
     function calculateCareQualityScore(pet, interactions) {
       const statAverage = (pet.hunger + pet.happiness + 
-        pet.cleanliness + pet.energy) / 4;
+                           pet.cleanliness + pet.energy) / 4;
       const statWeight = 0.4;
       
       const interactionFrequency = 
