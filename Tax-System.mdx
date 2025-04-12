@@ -1,0 +1,164 @@
+---
+title: 'Tax System'
+description: 'Understanding the GOCHI transaction tax and how it powers the ecosystem'
+---
+
+# Tax System
+
+GOCHI implements an 8% transaction tax on all $PURR token buy and sell transactions. This tax is the economic foundation of our sustainable care-to-earn model.
+
+## Tax Breakdown
+
+<Frame>
+  <img src="/images/tax-allocation.png" alt="GOCHI Tax Allocation" />
+</Frame>
+
+```mermaid
+pie
+  title: "8% Transaction Tax Allocation"
+  "Rewards" : 5
+  "Liquidity" : 2
+  "Development" : 1
+```
+
+<CardGroup cols={3}>
+  <Card title="5% Rewards" icon="gift">
+    Powers the SOL rewards distributed to active players based on their pet care quality and token holdings.
+  </Card>
+  
+  <Card title="2% Liquidity" icon="water">
+    Automatically adds to and deepens the token's liquidity pools, increasing price stability and reducing slippage.
+  </Card>
+  
+  <Card title="1% Development" icon="code">
+    Funds ongoing development, infrastructure costs, and ecosystem growth initiatives.
+  </Card>
+</CardGroup>
+
+## How The Tax Works
+
+<Steps>
+  <Step title="Transaction Occurs">
+    A user buys or sells $PURR tokens on a decentralized exchange.
+  </Step>
+  
+  <Step title="Tax is Applied">
+    8% of the transaction amount is automatically withheld by the smart contract.
+  </Step>
+  
+  <Step title="Tax is Distributed">
+    The tax is split into three allocations: 5% to rewards, 2% to liquidity, and 1% to development.
+  </Step>
+  
+  <Step title="Rewards Pool Filled">
+    The 5% rewards allocation is used to purchase SOL, which enters the reward distribution pool.
+  </Step>
+</Steps>
+
+## Rewards Pool Mechanics
+
+The 5% tax allocated to rewards is the lifeblood of GOCHI's care-to-earn system:
+
+```javascript
+// Example of how hourly reward pools are calculated
+function calculateHourlyRewardPool(dailyVolume) {
+  // 5% of all transactions go to rewards
+  const dailyRewardPool = dailyVolume * 0.05;
+  
+  // Hourly distribution (24 hours)
+  return dailyRewardPool / 24;
+}
+
+// On $5M daily volume
+// $5,000,000 * 0.05 = $250,000 daily rewards
+// $250,000 / 24 = $10,416 hourly rewards
+```
+
+<Note>
+At $5,000,000 daily trading volume, the reward system distributes approximately $250,000 in SOL rewards daily to active players.
+</Note>
+
+## Liquidity Enhancement
+
+The 2% liquidity allocation ensures market stability and depth:
+
+<CardGroup cols={2}>
+  <Card title="Automatic Liquidity" icon="gauge-high">
+    Half of the 2% (1%) is paired with SOL and added to the liquidity pool, deepening available liquidity.
+  </Card>
+  
+  <Card title="Strategic Reserves" icon="vault">
+    The other half (1%) is held in reserve for strategic liquidity injections during high volatility periods.
+  </Card>
+</CardGroup>
+
+## Development Fund Utilization
+
+The 1% development allocation is used transparently for:
+
+| Category | Allocation | Purpose |
+|----------|------------|---------|
+| Core Development | 40% | Server costs, contract improvements, feature development |
+| Security | 25% | Audits, security testing, and monitoring |
+| Marketing | 20% | User acquisition and community growth |
+| Contingency | 15% | Unexpected costs and opportunities |
+
+<AccordionGroup>
+  <Accordion title="Development Fund Governance">
+    After the first 12 months, development fund allocation will transition to a community-governed model, where $PURR holders can vote on fund utilization.
+  </Accordion>
+  
+  <Accordion title="Transparency Reports">
+    Quarterly reports will be published detailing the use of development funds, including all expenditures and allocations.
+  </Accordion>
+</AccordionGroup>
+
+## Tax Exemptions
+
+<Warning>
+There are NO tax exemptions for regular users. All buy and sell transactions incur the 8% tax to maintain ecosystem fairness.
+</Warning>
+
+The only transactions exempt from the tax are:
+
+- Initial liquidity provision by the GOCHI team
+- Token distribution to pre-launch participants
+- Inter-wallet transfers (subject to daily limits)
+
+## Tax vs. Price Impact
+
+<CardGroup cols={2}>
+  <Card title="Transaction Tax" icon="receipt-percent">
+    Fixed 8% on all transactions regardless of size.  
+    Directed to ecosystem functions.  
+    Applies to both buys and sells.
+  </Card>
+  
+  <Card title="Price Impact" icon="chart-simple">
+    Variable based on transaction size relative to liquidity.  
+    Larger trades have higher price impact.  
+    Can be minimized by using limit orders or splitting trades.
+  </Card>
+</CardGroup>
+
+## Sustainability Metrics
+
+The tax system creates a self-sustaining ecosystem as long as:
+
+```
+Daily Volume × 0.05 ≥ Daily Reward Distribution
+```
+
+At our target minimum daily volume of $5M, the system can sustainably distribute rewards while maintaining economic balance.
+
+<Frame>
+  <img src="/images/sustainability-metrics.png" alt="GOCHI Sustainability Metrics" />
+</Frame>
+
+<Tip>
+The GOCHI tax system was designed after extensive modeling and research into successful and failed token economics models to ensure long-term sustainability.
+</Tip>
+
+<Card title="View Related Information" icon="arrow-right">
+  Learn about how rewards are distributed in the [Distribution Model](/tokenomics/distribution-model) section.
+</Card>
