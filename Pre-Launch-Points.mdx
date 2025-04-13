@@ -1,53 +1,103 @@
 ---
-title: Pre-Launch Points
-description: Earning and accumulating points during GOCHI's pre-launch phase
+title: 'Pre-Launch Points'
+description: 'Earning and accumulating points during GOCHI's pre-launch phase'
 ---
-
-# Pre-Launch Points
 
 During GOCHI's pre-launch phase, players earn points rather than tokens. These points represent your future allocation of $PURR tokens when the project officially launches.
 
 ## How Points Work
 
-Points serve as a record of your early contribution and engagement with GOCHI, determining your share of the initial token allocation. Think of points as your claim ticket for the $PURR token airdrop at launch.
-
-Unlike tokens, points cannot be transferred between accounts, have no monetary value until converted, exist only within the GOCHI platform, and are not tradable on exchanges.
+<CardGroup cols={2}>
+  <Card title="Points Purpose" icon="bullseye">
+    Points serve as a record of your early contribution and engagement with GOCHI, determining your share of the initial token allocation.
+    
+    Think of points as your claim ticket for the $PURR token airdrop at launch.
+  </Card>
+  
+  <Card title="Points vs. Tokens" icon="scale-balanced">
+    Unlike tokens, points:
+    
+    - Cannot be transferred between accounts
+    - Have no monetary value until converted
+    - Exist only within the GOCHI platform
+    - Are not tradable on exchanges
+  </Card>
+</CardGroup>
 
 ## Points Generation Mechanics
 
-Points are earned through pet care based on AI evaluation of pet state quality, interaction frequency and consistency, and activity diversity and appropriateness.
+Points are earned through pet care based on AI evaluation of:
+
+- Pet state quality (health, happiness, hunger, cleanliness)
+- Interaction frequency and consistency
+- Activity diversity and appropriateness
 
 ### Base Point Calculation
 
-Points are calculated hourly using this formula:
+```javascript
+// How points are calculated hourly
+function calculateHourlyPoints(pet, player) {
+  // Base rate of points per hour
+  const baseRate = 10;
+  
+  // Quality multiplier based on pet state (0.5 to 3.0)
+  const qualityMultiplier = calculateQualityMultiplier(pet);
+  
+  // Streak multiplier based on consecutive days (1.0 to 1.5)
+  const streakMultiplier = 1.0 + Math.min(player.consecutiveDays * 0.05, 0.5);
+  
+  return baseRate * qualityMultiplier * streakMultiplier;
+}
 
+// Calculate quality multiplier based on pet stats
+function calculateQualityMultiplier(pet) {
+  // Average of all pet stats
+  const avgStats = (pet.hunger + pet.happiness + 
+                    pet.cleanliness + pet.energy) / 4;
+  
+  if (avgStats >= 90) return 3.0;      // Excellent care
+  else if (avgStats >= 70) return 2.0; // Good care
+  else if (avgStats >= 50) return 1.0; // Average care
+  else if (avgStats >= 30) return 0.5; // Poor care
+  else return 0.2;                     // Critical care
+}
 ```
-HourlyPoints = BaseRate × QualityMultiplier × StreakMultiplier
-```
-
-Where:
-- BaseRate = 10 points per hour
-- QualityMultiplier = 0.5 (poor) to 3.0 (excellent) based on pet state
-- StreakMultiplier = 1.0 + (ConsecutiveDays × 0.05), capped at 1.5
 
 ### Quality Multiplier
 
-The quality multiplier is based on the average of all pet stats:
-
-| Care Quality | Avg Stats | Multiplier | Points/Hour |
-|--------------|-----------|------------|-------------|
-| Excellent | ≥90% | 3.0× | 30 |
-| Good | ≥70% | 2.0× | 20 |
-| Average | ≥50% | 1.0× | 10 |
-| Poor | ≥30% | 0.5× | 5 |
-| Critical | &lt30% | 0.2× | 2 |
-
-Pet health is calculated as a weighted average of its core attributes:
-Food (40% weight), Happiness (20% weight), Cleanliness (20% weight), and Energy (20% weight).
+<CardGroup cols={3}>
+  <Card title="Excellent Care" icon="trophy">
+    **Multiplier:** 3.0×
+    
+    **Requirement:** Average stats ≥90%
+    
+    **Example:** 10 base points × 3.0 = 30 points/hour
+  </Card>
+  
+  <Card title="Good Care" icon="thumbs-up">
+    **Multiplier:** 2.0×
+    
+    **Requirement:** Average stats ≥70%
+    
+    **Example:** 10 base points × 2.0 = 20 points/hour
+  </Card>
+  
+  <Card title="Average Care" icon="check">
+    **Multiplier:** 1.0×
+    
+    **Requirement:** Average stats ≥50%
+    
+    **Example:** 10 base points × 1.0 = 10 points/hour
+  </Card>
+</CardGroup>
 
 ### Streak Multiplier
 
 The streak multiplier rewards consistent daily engagement:
+
+```
+StreakMultiplier = 1.0 + (ConsecutiveDays × 0.05), capped at 1.5
+```
 
 | Consecutive Days | Streak Multiplier | Effect on Points |
 |------------------|-------------------|------------------|
@@ -61,21 +111,45 @@ Logging in and caring for your pet every day builds a valuable streak multiplier
 
 ## Pre-Launch Farming Limitations
 
-To prevent excessive rewards during pre-launch, we implement caps on daily and total point earnings.
+To prevent excessive rewards during pre-launch:
 
 ### Daily Points Cap
 
-```
-DailyPointsCap = 200 + (DaysActive × 20), maximum 500
+```javascript
+// Daily points cap increases with consecutive activity
+function calculateDailyPointsCap(player) {
+  // Base cap for new players
+  const baseCap = 200;
+  
+  // Cap increases by 20 points per active day
+  const increase = Math.min(player.daysActive * 20, 300);
+  
+  // Maximum daily cap is 500 points
+  return Math.min(baseCap + increase, 500);
+}
 ```
 
-This means:
-- Day 1: Maximum 200 points
-- Day 5: Maximum 300 points
-- Day 10: Maximum 400 points
-- Day 15+: Maximum 500 points
-
-A player with excellent care (3.0×) and a 10-day streak (1.5×) would have a base earning rate of 10 points/hour, which with multipliers becomes 10 × 3.0 × 1.5 = 45 points/hour. Their potential 24-hour earnings would be 45 × 24 = 1,080 points, but with a 10-day cap, they would be limited to 400 points/day. This system rewards quality care while preventing excessive farming.
+<AccordionGroup>
+  <Accordion title="Daily Cap Progression">
+    | Active Days | Daily Cap | Explanation |
+    |------------|-----------|-------------|
+    | 1 | 200 | Base cap for new players |
+    | 5 | 300 | 200 + (5 × 20) = 300 |
+    | 10 | 400 | 200 + (10 × 20) = 400 |
+    | 15+ | 500 | Maximum daily cap |
+  </Accordion>
+  
+  <Accordion title="Daily Cap Example">
+    A player with excellent care (3.0×) and a 10-day streak (1.5×):
+    
+    - Base earning rate: 10 points/hour
+    - With multipliers: 10 × 3.0 × 1.5 = 45 points/hour
+    - Potential 24-hour earnings: 45 × 24 = 1,080 points
+    - With 10-day cap: Limited to 400 points/day
+    
+    This system rewards quality care while preventing excessive farming.
+  </Accordion>
+</AccordionGroup>
 
 ### Total Pre-Launch Points Cap
 
@@ -91,24 +165,31 @@ Once you reach your total points cap, you can continue playing and caring for yo
 
 ## Referral Program
 
-Referring new players provides two important benefits:
-
-1. Increases your point earning rate by 5% per referral (up to +50%)
-2. Raises your total points cap by 500 per referral (up to +5,000)
-
-To count as a successful referral, new players must create a GOCHI account, connect their wallet, and maintain an active pet for at least 3 days.
+<CardGroup cols={2}>
+  <Card title="Referral Process" icon="share-nodes">
+    Share your unique referral link with friends. They must:
+    
+    1. Create a GOCHI account
+    2. Connect their wallet
+    3. Maintain an active pet for at least 3 days
+  </Card>
+  
+  <Card title="Referral Benefits" icon="gift">
+    Each successful referral provides:
+    
+    - +5% to your point earning rate (up to +50%)
+    - +500 to your total points cap (up to +5,000)
+    - One-time bonus of 100 points
+  </Card>
+</CardGroup>
 
 ### Milestone Rewards
-
-Reaching referral milestones unlocks special bonuses:
 
 | Referrals | Total Earning Boost | Cap Increase | Special Reward |
 |-----------|---------------------|--------------|----------------|
 | 3 | +15% | +1,500 | Unique pet accessory |
 | 5 | +25% | +2,500 | Rare pet background |
 | 10 | +50% | +5,000 | Exclusive pet variant |
-
-Both you and your referred friends benefit! New players who join through a referral link receive a 10% point boost for their first week.
 
 ## Token Conversion
 
@@ -120,34 +201,46 @@ Individual Token Allocation = (Individual Points ÷ Total Points Pool) × 150,00
 
 ### Allocation Protections
 
-To ensure fair distribution, we implement:
+<CardGroup cols={2}>
+  <Card title="Minimum Guarantee" icon="shield-check">
+    Any user with at least 100 points receives minimum 1,000 tokens, ensuring all active participants receive meaningful rewards.
+  </Card>
+  
+  <Card title="Maximum Cap" icon="shield-exclamation">
+    No single user can receive more than 500,000 tokens (0.05% of supply), ensuring fair distribution.
+  </Card>
+</CardGroup>
 
-- Minimum allocation: 1,000 $PURR tokens for accounts with ≥100 points
-- Maximum allocation: 500,000 $PURR tokens per account
+## Bonus Allocations
 
-### Bonus Allocations
-
-#### Leaderboard Bonuses
-- Top 10: +20% bonus allocation
-- Top 100: +15% bonus allocation
-- Top 500: +10% bonus allocation
-- Top 1,000: +5% bonus allocation
-
-#### Early Adopter Bonuses
-- Week 1-2 participants: +20% bonus
-- Week 3-4 participants: +10% bonus
-- Week 5+ participants: Standard allocation
+<CardGroup cols={2}>
+  <Card title="Leaderboard Bonuses" icon="ranking-star">
+    Top 10: +20% bonus allocation
+    
+    Top 100: +15% bonus allocation
+    
+    Top 500: +10% bonus allocation
+    
+    Top 1,000: +5% bonus allocation
+  </Card>
+  
+  <Card title="Early Adopter Bonuses" icon="hourglass-start">
+    Week 1-2 participants: +20% bonus
+    
+    Week 3-4 participants: +10% bonus
+    
+    Week 5+ participants: Standard allocation
+  </Card>
+</CardGroup>
 
 ## Strategic Tips
 
-### Daily Consistency
-Log in daily to maintain your streak multiplier, even if you can only perform minimal pet care. The streak bonus compounds your earnings significantly.
-
-### Focus on Quality
-Prioritize maintaining excellent pet stats (≥90%) for the maximum 3.0× quality multiplier, as this has the biggest impact on point generation.
-
-### Optimal Referral Strategy
-Focus on referring active players who will maintain their pets, as inactive referrals won't contribute to your earning boost.
-
-### Regular Monitoring
-Check your points dashboard daily to track your progress toward caps and adjust your strategy accordingly.
+<CardGroup cols={2}>
+  <Card title="Daily Consistency" icon="calendar-check">
+    Log in daily to maintain your streak multiplier, even if you can only perform minimal pet care. The streak bonus compounds your earnings significantly.
+  </Card>
+  
+  <Card title="Focus on Quality" icon="star">
+    Prioritize maintaining excellent pet stats (≥90%) for the maximum 3.0× quality multiplier, as this has the biggest impact on point generation.
+  </Card>
+</CardGroup>
