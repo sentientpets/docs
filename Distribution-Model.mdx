@@ -3,29 +3,27 @@ title: "Distribution Model"
 description: "How SOL rewards are calculated and distributed to GOCHI players"
 ---
 
+# Distribution Model
+
 GOCHI distributes SOL rewards to players based on a combination of pet care quality and $PURR token holdings. This hybrid model rewards both active gameplay and ecosystem investment.
 
 ## Distribution Principles
 
 <CardGroup cols={3}>
   <Card title="Hourly Payouts" icon="clock">
-    Rewards are calculated and distributed every hour, driving frequent engagement and creating constant excitement.
+    Rewards are calculated and distributed every hour, driving frequent engagement.
   </Card>
   
   <Card title="Dual Factors" icon="scale-balanced">
-    Rewards are based on both active pet care (gameplay) and $PURR holdings (investment), balancing both activities.
+    Rewards are based on both active pet care and $PURR holdings.
   </Card>
   
   <Card title="Transparent Formula" icon="calculator">
-    All reward calculations follow a public, verifiable formula that players can use to understand their earnings.
+    All reward calculations follow a public, verifiable formula.
   </Card>
 </CardGroup>
 
 ## Reward Formula
-
-<Frame>
-  <img src="/images/reward-formula.png" alt="GOCHI Reward Formula Visualization" />
-</Frame>
 
 ```
 Individual Reward = (UserPoints ÷ TotalPoints) × HoldingMultiplier × HourlyPool
@@ -43,44 +41,88 @@ Your pet's state directly influences your point generation, which is a key compo
 
 <CardGroup cols={2}>
   <Card title="Care Quality Points" icon="heart-pulse">
-    Points are awarded hourly based on your pet's overall health:
-    
-    **Excellent (≥90%):** 30 points/hour
-    **Good (70-89%):** 20 points/hour
-    **Average (50-69%):** 10 points/hour
-    **Poor (30-49%):** 5 points/hour
-    **Critical (&lt30%):** 1 point/hour
-    **Dead:** 0 points/hour
+    <table>
+      <thead>
+        <tr>
+          <th>Pet State</th>
+          <th>Avg Stats</th>
+          <th>Points/Hour</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Excellent</td>
+          <td>≥90%</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>Good</td>
+          <td>70-89%</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Average</td>
+          <td>50-69%</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Poor</td>
+          <td>30-49%</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>Critical</td>
+          <td>&lt;30%</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Dead</td>
+          <td>0%</td>
+          <td>0</td>
+        </tr>
+      </tbody>
+    </table>
   </Card>
   
   <Card title="Point Weight" icon="weight-scale">
-    Pet health is calculated as a weighted average:
+    <table>
+      <thead>
+        <tr>
+          <th>Attribute</th>
+          <th>Weight</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Food</td>
+          <td>40%</td>
+        </tr>
+        <tr>
+          <td>Happiness</td>
+          <td>20%</td>
+        </tr>
+        <tr>
+          <td>Cleanliness</td>
+          <td>20%</td>
+        </tr>
+        <tr>
+          <td>Energy</td>
+          <td>20%</td>
+        </tr>
+      </tbody>
+    </table>
     
-    **Food:** 40% weight
-    **Happiness:** 20% weight
-    **Cleanliness:** 20% weight
-    **Energy:** 20% weight
-    
-    This formula emphasizes the importance of feeding your pet while still requiring balanced care.
+    This formula emphasizes feeding while requiring balanced care.
   </Card>
 </CardGroup>
 
 ## Token Holding Multiplier
-
-<Frame>
-  <img src="/images/holding-multiplier.png" alt="GOCHI Holding Multiplier Chart" />
-</Frame>
 
 The amount of $PURR tokens in your wallet significantly impacts your reward multiplier:
 
 ```
 HoldingMultiplier = min(0.2 + (userTokens ÷ 10,000)^0.7, 8.0)
 ```
-
-This creates a balanced curve that:
-- Provides minimal rewards (0.2×) for non-holders
-- Gives standard rewards (1.0×) at modest holdings (10,000 tokens)
-- Scales up to a maximum of 8.0× for major holders (10M+ tokens)
 
 <table>
   <thead>
@@ -120,7 +162,7 @@ This creates a balanced curve that:
 </table>
 
 <Note>
-The reward multiplier uses a power function (exponent 0.7) to create a curve that prevents whales from completely dominating the reward pool while still providing significant incentives for token holdings.
+The multiplier uses a power function (exponent 0.7) that prevents whales from completely dominating the reward pool while still providing significant incentives for token holdings.
 </Note>
 
 ## Hourly Reward Pool
@@ -131,22 +173,32 @@ The hourly reward pool is funded by the 5% transaction tax and calculated as:
 HourlyRewardPool = (DailyVolume × 0.05) ÷ 24
 ```
 
-<AccordionGroup>
-  <Accordion title="Reward Pool Examples">
-    | Daily Volume | Daily Rewards | Hourly Pool |
-    |--------------|---------------|-------------|
-    | $1,000,000 | $50,000 | $2,083 |
-    | $5,000,000 | $250,000 | $10,416 |
-    | $10,000,000 | $500,000 | $20,833 |
-    | $25,000,000 | $1,250,000 | $52,083 |
-  </Accordion>
-  
-  <Accordion title="Volume Projections">
-    - **Launch Phase (Weeks 1-2):** $10M-$25M daily volume
-    - **Growth Phase (Months 1-3):** $5M-$10M daily volume
-    - **Stabilization Phase (Month 4+):** $3M-$7M daily volume
-  </Accordion>
-</AccordionGroup>
+<table>
+  <thead>
+    <tr>
+      <th>Daily Volume</th>
+      <th>Daily Rewards</th>
+      <th>Hourly Pool</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$1,000,000</td>
+      <td>$50,000</td>
+      <td>$2,083</td>
+    </tr>
+    <tr>
+      <td>$5,000,000</td>
+      <td>$250,000</td>
+      <td>$10,416</td>
+    </tr>
+    <tr>
+      <td>$10,000,000</td>
+      <td>$500,000</td>
+      <td>$20,833</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Distribution Mechanics
 
@@ -171,28 +223,42 @@ HourlyRewardPool = (DailyVolume × 0.05) ÷ 24
 ## Player Earning Examples
 
 <CardGroup cols={2}>
-  <Card title="New Player (No Holdings)" icon="user">
-    - Good care quality (20 points/hour)
-    - 0 $PURR tokens (0.2× multiplier)
-    - At $5M daily volume: ~$0.83/day
+  <Card title="New Player" icon="user">
+    <table>
+      <tbody>
+        <tr>
+          <td>Care Quality</td>
+          <td>Good (20 points/hour)</td>
+        </tr>
+        <tr>
+          <td>Token Holdings</td>
+          <td>0 (0.2× multiplier)</td>
+        </tr>
+        <tr>
+          <td>Daily Earnings</td>
+          <td>~$0.83 at $5M volume</td>
+        </tr>
+      </tbody>
+    </table>
   </Card>
   
-  <Card title="Casual Player (Small Holder)" icon="user-group">
-    - Good care quality (20 points/hour)
-    - 10,000 $PURR tokens (1.0× multiplier)
-    - At $5M daily volume: ~$4.17/day
-  </Card>
-  
-  <Card title="Dedicated Player (Medium Holder)" icon="user-check">
-    - Excellent care quality (30 points/hour)
-    - 100,000 $PURR tokens (2.0× multiplier)
-    - At $5M daily volume: ~$12.50/day
-  </Card>
-  
-  <Card title="Whale (Large Holder)" icon="crown">
-    - Excellent care quality (30 points/hour)
-    - 10,000,000 $PURR tokens (8.0× multiplier)
-    - At $5M daily volume: ~$50/day
+  <Card title="Dedicated Player" icon="user-check">
+    <table>
+      <tbody>
+        <tr>
+          <td>Care Quality</td>
+          <td>Excellent (30 points/hour)</td>
+        </tr>
+        <tr>
+          <td>Token Holdings</td>
+          <td>100,000 (2.0× multiplier)</td>
+        </tr>
+        <tr>
+          <td>Daily Earnings</td>
+          <td>~$12.50 at $5M volume</td>
+        </tr>
+      </tbody>
+    </table>
   </Card>
 </CardGroup>
 
@@ -206,16 +272,12 @@ These earning examples are projections based on estimated trading volume and pla
   <Card title="Claim Frequency" icon="clock">
     Players can claim rewards once per hour after the calculation period ends.
     
-    Unclaimed rewards accumulate for up to 7 days before expiring to encourage regular engagement.
+    Unclaimed rewards accumulate for up to 7 days.
   </Card>
   
   <Card title="Special Events" icon="calendar-star">
     Special "Power Hours" with boosted rewards occur randomly to drive engagement.
     
-    Weekend reward multipliers provide 1.5× the normal rewards to accommodate higher player activity.
+    Weekend reward multipliers provide 1.5× the normal rewards.
   </Card>
 </CardGroup>
-
-<Card title="View Related Information" icon="arrow-right">
-  Explore the complete financial model in the [Token Economics](/tokenomics/token-economics) section.
-</Card>
