@@ -7,7 +7,7 @@
     "light": "#D1E3B0",
     "dark": "#31361D"
   },
-  "favicon": "https://media.discordapp.net/attachments/1224667348620021830/1360645835569762535/38370ed4-d795-47e5-811a-62b3e19a7ca2_1.png?ex=67fbdfae&is=67fa8e2e&hm=bd6ccb99c220d05f9ef9cb91f3bd0002b07a2dea9e2892478bdfd5570bb4e553&=&format=webp&quality=lossless",
+  "favicon": "/images/favicon.png",
   "appearance": {
     "default": "light",
     "strict": true
@@ -111,8 +111,8 @@
     }
   },
   "logo": {
-    "light": "https://media.discordapp.net/attachments/1066716537467187271/1359920865130582319/gochibanner3_3.png?ex=67fb36c0&is=67f9e540&hm=a7484a82cf20d38233e0f7cf6e311de0855ab6a2814c80db46261363d5807f96&=&format=webp&quality=lossless&width=1637&height=545",
-    "dark": "https://media.discordapp.net/attachments/1066716537467187271/1359920865130582319/gochibanner3_3.png?ex=67fb36c0&is=67f9e540&hm=a7484a82cf20d38233e0f7cf6e311de0855ab6a2814c80db46261363d5807f96&=&format=webp&quality=lossless&width=1637&height=545"
+    "light": "/images/logo.png",
+    "dark": "/images/logo.png"
   },
   "navbar": {
     "links": [
