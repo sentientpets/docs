@@ -8,9 +8,9 @@
     "dark": "#31361D"
   },
   "favicon": {
-  "light": "/images/favicon.png",
-  "dark": "/images/favicon.png"
-},
+    "light": "/images/favicon.png",
+    "dark": "/images/favicon.png"
+  },
   "appearance": {
     "default": "light",
     "strict": true
@@ -21,6 +21,13 @@
       "dark": "#FFFFFF"
     },
     "decoration": "windows"
+  },
+  "seo": {
+    "metatags": {
+      "og:title": "Your Gochi AI Companion On Solana",
+      "og:description": "GOCHI is a blockchain-based virtual pet game that combines nostalgic Tamagotchi-style gameplay with cryptocurrency rewards on the Solana network. Players care for digital cat companions by feeding, playing with, and cleaning them to earn real SOL rewards.",
+      "og:image": "/images/banner.jpg"
+    }
   },
   "navigation": {
     "tabs": [
@@ -68,7 +75,6 @@
               "Token-Overview",
               "Tax-System",
               "Distribution-Model",
-              "Token-Economics"
             ]
           }
         ]
@@ -141,5 +147,4 @@
     "suggestEdit": false,
     "raiseIssue": false
   }
-
 }
