@@ -7,7 +7,10 @@
     "light": "#D1E3B0",
     "dark": "#31361D"
   },
-  "favicon": "/images/favicon.png",
+  "favicon": {
+  "light": "/path/to/light-favicon.png",
+  "dark": "/path/to/dark-favicon.png"
+}
   "appearance": {
     "default": "light",
     "strict": true
