@@ -8,9 +8,9 @@
     "dark": "#31361D"
   },
   "favicon": {
-  "light": "/path/to/light-favicon.png",
-  "dark": "/path/to/dark-favicon.png"
-}
+  "light": "/images/favicon.png",
+  "dark": "/images/favicon.png"
+},
   "appearance": {
     "default": "light",
     "strict": true
