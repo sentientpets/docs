@@ -1,6 +1,6 @@
 ---
-title: 'Quick Start'
-description: 'Begin your journey with GOCHI in minutes and start earning rewards'
+title: "Quick Start"
+description: "Begin your journey with GOCHI in minutes and start earning rewards"
 ---
 
 <img
@@ -8,6 +8,7 @@ description: 'Begin your journey with GOCHI in minutes and start earning rewards
   src="/images/banner.jpg"
   alt="GOCHI Hero Light"
 />
+
 <img
   className="hidden dark:block"
   src="/images/banner.jpg"
@@ -20,10 +21,10 @@ Remember your Tamagotchi or Pou that demanded constant attention and gave nothin
 
 Gochi is an AI-powered pixel companion on Solana that rewards care. Feed, play, and clean your GOCHI to earn SOL straight to your wallet. The better your care, the bigger your earnings.
 
-With adaptive AI that develops a unique personality based on your interactions, GOCHI creates a compelling loop: love your pet, grow your crypto. This time, keeping your virtual friend alive might actually help pay the bills... 
+With adaptive AI that develops a unique personality based on your interactions, GOCHI creates a compelling loop: love your pet, grow your crypto. This time, keeping your virtual friend alive might actually help pay the bills...
 
 <Note>
-  GOCHI is currently in pre-launch phase. During this period, you'll earn points that convert to $PURR tokens at launch.
+  GOCHI is currently in pre-launch phase. During this period, you'll earn points that convert to \$PURR tokens at launch.
 </Note>
 
 ## Setup your GOCHI
@@ -33,10 +34,10 @@ Get started with your AI-powered companion in just a few simple steps.
 <Steps>
   <Step title="Create Your Account">
     Connect your Solana wallet to establish your account and create your digital companion.
-    
+
     ```bash
     # Only connect through our official website
-    https://gochipet.ai
+    https://gochipet.ai (Releases in the next few days)
     ```
 
     <Warning>
@@ -45,30 +46,34 @@ Get started with your AI-powered companion in just a few simple steps.
   </Step>
   <Step title="Meet Your GOCHI">
     Once connected, you'll receive your personalized AI-powered cat companion. Each GOCHI has unique traits and will develop a personality based on your interactions.
-    
+
     <Frame>
-      <img src="/images/interface.png" />
+      ![](/images/interface.png)
     </Frame>
   </Step>
   <Step title="Understand Basic Care">
     Your GOCHI has four main attributes to maintain through regular care:
-    
-    <CardGroup cols={2}>
+
+    <CardGroup cols="2">
       <Card title="Hunger" icon="bowl-food">
         How well-fed your pet is
-        <br />**Decay Rate:** -30% per hour
+
+        **Decay Rate:** -30% per hour
       </Card>
       <Card title="Happiness" icon="face-smile">
         Your pet's contentment
-        <br />**Decay Rate:** -25% per hour
+
+        **Decay Rate:** -25% per hour
       </Card>
       <Card title="Cleanliness" icon="shower">
         How clean your pet is
-        <br />**Decay Rate:** -20% per hour
+
+        **Decay Rate:** -20% per hour
       </Card>
       <Card title="Energy" icon="bolt">
         Your pet's activity level
-        <br />**Decay Rate:** -15% per hour
+
+        **Decay Rate:** -15% per hour
       </Card>
     </CardGroup>
   </Step>
@@ -79,26 +84,29 @@ Get started with your AI-powered companion in just a few simple steps.
 For optimal results and maximum earnings, check on your GOCHI 8-10 times within a 10-hour active period.
 
 <AccordionGroup>
-  <Accordion icon="sun" title="Morning Care">
+  <Accordion title="Morning Care" icon="sun">
     Start your day by feeding and playing with your pet to replenish stats that decreased overnight.
-    
+
     **Recommended activities:**
+
     - Feed with nutritious food
     - Quick play session
     - Basic grooming
   </Accordion>
-  <Accordion icon="clock" title="Regular Check-ins">
+  <Accordion title="Regular Check-ins" icon="clock">
     Brief interactions every 1-2 hours keep your pet's stats in the optimal range.
-    
+
     **Recommended frequency:**
+
     - Feed every 2-3 hours
     - Play every 3-4 hours
     - Clean every 4-5 hours
   </Accordion>
-  <Accordion icon="moon" title="Evening Care">
+  <Accordion title="Evening Care" icon="moon">
     More thorough attention before activating Sleep Mode ensures your pet remains in good condition overnight.
-    
+
     **Recommended activities:**
+
     - Full meal
     - Extended play session
     - Thorough cleaning
@@ -108,54 +116,58 @@ For optimal results and maximum earnings, check on your GOCHI 8-10 times within 
 
 ## Core Gameplay Actions
 
-<CardGroup cols={3}>
-  <Card title="Feeding" icon="utensils" href="/care-activities#feeding">
+<CardGroup cols="3">
+  <Card title="Feeding" icon="utensils" href="/care-activities">
     Provide various foods to maintain hunger levels and boost other stats
   </Card>
-  <Card title="Playing" icon="game-console-handheld" href="/care-activities#playing">
+  <Card title="Playing" icon="game-console-handheld" href="/care-activities">
     Engage in activities to increase happiness while using energy
   </Card>
-  <Card title="Cleaning" icon="broom" href="/care-activities#cleaning">
+  <Card title="Cleaning" icon="broom" href="/care-activities">
     Keep your pet clean to maintain health and happiness
   </Card>
 </CardGroup>
 
 ## Start Earning
 
-During the pre-launch phase, quality care earns you points that will convert to $PURR tokens at launch.
+During the pre-launch phase, quality care earns you points that will convert to \$PURR tokens at launch.
 
 <Tabs>
   <Tab title="Points Earning">
     <CodeGroup>
-      ```javascript Points Formula
-      hourlyPoints = baseRate * qualityMultiplier * streakMultiplier
-      
-      // Where:
-      // baseRate = 10 points per hour
-      // qualityMultiplier = 0.5 (poor) to 3.0 (excellent) based on pet state
-      // streakMultiplier = 1.0 + (consecutiveDays * 0.05), capped at 1.5
-      ```
+
+    ```javascript Points Formula
+    hourlyPoints = baseRate * qualityMultiplier * streakMultiplier
+    
+    // Where:
+    // baseRate = 10 points per hour
+    // qualityMultiplier = 0.5 (poor) to 3.0 (excellent) based on pet state
+    // streakMultiplier = 1.0 + (consecutiveDays * 0.05), capped at 1.5
+    ```
+
     </CodeGroup>
 
     Your points earning rate depends on:
+
     - Overall pet stat levels
     - Consistency of interactions
     - Consecutive days of active play
   </Tab>
   <Tab title="Token Conversion">
-    At launch, your accumulated points will convert to $PURR tokens based on your share of the total point pool:
-    
+    At launch, your accumulated points will convert to \$PURR tokens based on your share of the total point pool:
+
     ```
     tokenAllocation = (yourPoints / totalPointsPool) * 150,000,000
     ```
-    
-    - 15% of total $PURR supply allocated to pre-launch participants
-    - Minimum allocation of 1,000 $PURR for active participants
-    - Maximum allocation of 500,000 $PURR per wallet
+
+    - 5% of total \$TOKEN supply allocated to pre-launch participants
+    - Minimum allocation of 1,000 \$TOKEN for active participants
+    - Maximum allocation of 500,000 \$TOKEN per wallet
+    - Maximum 1000 wallets for airdrop
   </Tab>
   <Tab title="Post-Launch Rewards">
     After launch, rewards shift from points to SOL:
-    
+
     - 5% transaction tax funds the reward pool
     - Rewards distributed hourly based on care quality
     - Token holdings multiply your reward rate
@@ -168,29 +180,32 @@ During the pre-launch phase, quality care earns you points that will convert to 
 <Check>
   **Consistency matters:** Regular interaction is better than sporadic intensive care
 </Check>
+
 <Check>
   **Balance attributes:** Pay attention to all four pet stats
 </Check>
+
 <Check>
   **Use Sleep Mode:** Always activate before extended absences
 </Check>
+
 <Check>
   **Check the dashboard:** Monitor your point earnings and leaderboard position
 </Check>
 
 ## Popular Resources
 
-<CardGroup cols={2}>
-  <Card title="Pet Stats & Needs" icon="chart-line" href="/pet-mechanics-ai/pet-stats-needs">
+<CardGroup cols="2">
+  <Card title="Pet Stats & Needs" icon="chart-line" href="/pet-stats">
     Learn how care quality affects your earnings
   </Card>
-  <Card title="AI Personality System" icon="robot" href="/pet-mechanics-ai/ai-personality">
+  <Card title="AI Personality System" icon="robot" href="/ai-personality">
     Discover how your GOCHI develops a unique personality
   </Card>
-  <Card title="Care Activities" icon="hand-holding-heart" href="/pet-mechanics-ai/care-activities">
+  <Card title="Care Activities" icon="hand-holding-heart" href="/care-activities">
     Master the different ways to interact with your pet
   </Card>
-  <Card title="Earning Mechanics" icon="coins" href="/earning-mechanics/care-to-earn">
+  <Card title="Earning Mechanics" icon="coins" href="/earning-mechanics">
     Understand how caring translates to earnings
   </Card>
 </CardGroup>
