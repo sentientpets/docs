@@ -48,6 +48,7 @@
               "AI-Personality",
               "Care-Activities",
               "Pet-Health",
+              "Special-Interactions"
             ]
           },
           {
@@ -73,7 +74,7 @@
             "pages": [
               "Token-Overview",
               "Tax-System",
-              "Distribution-Model",
+              "Distribution-Model"
             ]
           }
         ]
@@ -132,7 +133,7 @@
   },
   "footer": {
     "socials": {
-      "twitter": "https://x.com/gochionsol",
+      "twitter": "https://x.com/gochionsol"
     }
   },
   "feedback": {
