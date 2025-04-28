@@ -1,9 +1,9 @@
 ---
 title: 'Points Conversion'
-description: 'How pre-launch points convert to $PURR tokens at launch'
+description: 'How pre-launch points convert to $TOKEN tokens at launch'
 ---
 
-At the end of GOCHI's pre-launch phase, your accumulated points will be converted to $PURR tokens based on your share of the total points pool. This page explains the conversion process, allocation formula, and vesting schedule.
+At the end of GOCHI's pre-launch phase, your accumulated points will be converted to $TOKEN tokens based on your share of the total points pool. This page explains the conversion process, allocation formula, and vesting schedule.
 
 ## Conversion Timeline
 
@@ -24,7 +24,7 @@ At the end of GOCHI's pre-launch phase, your accumulated points will be converte
 
 ## Allocation Formula
 
-Your $PURR token allocation is calculated using this formula:
+Your $TOKEN token allocation is calculated using this formula:
 
 ```
 IndividualTokenAllocation = (YourPoints ÷ TotalPointsPool) × TokenAllocationPool
@@ -33,7 +33,7 @@ IndividualTokenAllocation = (YourPoints ÷ TotalPointsPool) × TokenAllocationPo
 Where:
 - `YourPoints` is your final points balance at snapshot
 - `TotalPointsPool` is the sum of all players' points
-- `TokenAllocationPool` is 150,000,000 $PURR (15% of total supply)
+- `TokenAllocationPool` is 150,000,000 $TOKEN (15% of total supply)
 
 ## Allocation Example
 
@@ -43,19 +43,19 @@ Where:
     
     **A player with 10,000 points would receive:**
     
-    (10,000 ÷ 10,000,000) × 150,000,000 = 150,000 $PURR tokens
+    (10,000 ÷ 10,000,000) × 150,000,000 = 150,000 $TOKEN tokens
     
     **A player with 5,000 points would receive:**
     
-    (5,000 ÷ 10,000,000) × 150,000,000 = 75,000 $PURR tokens
+    (5,000 ÷ 10,000,000) × 150,000,000 = 75,000 $TOKEN tokens
   </Accordion>
   
   <Accordion title="Maximum Cap Example">
     A player who reached the maximum 20,000 points cap:
     
-    (20,000 ÷ 10,000,000) × 150,000,000 = 300,000 $PURR tokens
+    (20,000 ÷ 10,000,000) × 150,000,000 = 300,000 $TOKEN tokens
     
-    However, this would be subject to the maximum allocation cap of 500,000 $PURR.
+    However, this would be subject to the maximum allocation cap of 500,000 $TOKEN.
   </Accordion>
 </AccordionGroup>
 
@@ -65,17 +65,17 @@ To ensure fair distribution, several protections are in place:
 
 <CardGroup cols={2}>
   <Card title="Minimum Allocation" icon="shield-check">
-    Any user with at least 100 points receives a minimum of 1,000 $PURR tokens, ensuring even casual participants receive a meaningful allocation.
+    Any user with at least 100 points receives a minimum of 1,000 $TOKEN tokens, ensuring even casual participants receive a meaningful allocation.
   </Card>
   <Card title="Maximum Allocation" icon="shield-halved">
-    No single account can receive more than 500,000 $PURR tokens (0.05% of total supply), preventing excessive concentration.
+    No single account can receive more than 500,000 $TOKEN tokens (0.05% of total supply), preventing excessive concentration.
   </Card>
 </CardGroup>
 
 | Protection Type | Threshold | Effect |
 |-----------------|-----------|--------|
-| Minimum Allocation | 100+ points | Guarantees 1,000 $PURR |
-| Maximum Allocation | Formula result > 500,000 | Caps at 500,000 $PURR |
+| Minimum Allocation | 100+ points | Guarantees 1,000 $TOKEN |
+| Maximum Allocation | Formula result > 500,000 | Caps at 500,000 $TOKEN |
 | Activity Requirement | Activity in final week | Required for conversion |
 
 <Note>
@@ -88,7 +88,7 @@ Token allocations follow a partial vesting schedule to ensure ecosystem stabilit
 
 ```mermaid
 gantt
-    title $PURR Token Vesting Schedule
+    title $TOKEN Token Vesting Schedule
     dateFormat  YYYY-MM-DD
     section Initial
     50% Immediate Release : milestone, 2025-01-01, 0d
@@ -103,29 +103,29 @@ gantt
     <Tr>
       <Th>Period</Th>
       <Th>Percentage</Th>
-      <Th>For 150,000 $PURR Example</Th>
+      <Th>For 150,000 $TOKEN Example</Th>
     </Tr>
   </Thead>
   <Tbody>
     <Tr>
       <Td>Launch Day</Td>
       <Td>50%</Td>
-      <Td>75,000 $PURR</Td>
+      <Td>75,000 $TOKEN</Td>
     </Tr>
     <Tr>
       <Td>End of Month 1</Td>
       <Td>16.7%</Td>
-      <Td>25,050 $PURR</Td>
+      <Td>25,050 $TOKEN</Td>
     </Tr>
     <Tr>
       <Td>End of Month 2</Td>
       <Td>16.7%</Td>
-      <Td>25,050 $PURR</Td>
+      <Td>25,050 $TOKEN</Td>
     </Tr>
     <Tr>
       <Td>End of Month 3</Td>
       <Td>16.6%</Td>
-      <Td>24,900 $PURR</Td>
+      <Td>24,900 $TOKEN</Td>
     </Tr>
   </Tbody>
 </Table>
