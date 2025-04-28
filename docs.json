@@ -48,7 +48,6 @@
               "AI-Personality",
               "Care-Activities",
               "Pet-Health",
-              "Special-Interactions"
             ]
           },
           {
@@ -75,7 +74,6 @@
               "Token-Overview",
               "Tax-System",
               "Distribution-Model",
-              "Token-Economics"
             ]
           }
         ]
@@ -108,11 +106,6 @@
           "icon": "globe"
         },
         {
-          "anchor": "Community",
-          "href": "https://discord.gg/gochi",
-          "icon": "discord"
-        },
-        {
           "anchor": "Twitter",
           "href": "https://x.com/gochionsol",
           "icon": "twitter"
@@ -140,8 +133,6 @@
   "footer": {
     "socials": {
       "twitter": "https://x.com/gochionsol",
-      "github": "https://github.com/gochi",
-      "discord": "https://discord.gg/gochi"
     }
   },
   "feedback": {
